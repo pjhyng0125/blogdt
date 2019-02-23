@@ -30,7 +30,7 @@ public class BListDAO {
 	private Connection getConnection() throws Exception{
 		Context initCtx=new InitialContext();
 		Context envCtx=(Context) initCtx.lookup("java:comp/env");
-		DataSource ds=(DataSource)envCtx.lookup("jdbc/blogidt");
+		DataSource ds=(DataSource)envCtx.lookup("jdbc/blogdt");
 		return ds.getConnection();
 	}
 	
@@ -42,9 +42,7 @@ public class BListDAO {
 		List<BListDTO> list=null;	//select 결과가 저장되어 반환될 List
 		
 		conn=getConnection();
-		String sql="select name,dept,btype,img"
-				+ "from member as m,board as b"
-				+ "where m.id=b.id";
+		String sql="select name,dept,btype,img from member as m, board as b where m.id=b.id";
 		pstmt=conn.prepareStatement(sql);
 		rs=pstmt.executeQuery();
 		
@@ -56,6 +54,7 @@ public class BListDAO {
 				dto.setDept(rs.getString("dept"));
 				dto.setBtype(rs.getString("btype"));
 				dto.setImg(rs.getString("img"));
+				System.out.println(dto.getImg());
 				list.add(dto);
 			}while(rs.next());
 		}

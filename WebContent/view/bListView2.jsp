@@ -1,14 +1,9 @@
-<%--
-<%@page import="blogdt.dto.BListDTO"%>
-<%@page import="blogdt.dao.BListDAO"%>
-<%@page import="java.util.List"%>
- --%>
-<%@page import="blogdt.dao.BListDAO"%>
-<%@page import="blogdt.dto.BListDTO"%>
-<%@page import="java.util.List"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@include file="../include/reference.jsp"%>
+<%@page import="blogdt.dao.BListDAO"%>
+<%@page import="blogdt.dto.BListDTO"%>
+<%@page import="java.util.List"%>
 <title>bListView.jsp</title>
 <!-- 
 	파일명: bListView.jsp (board List view)
@@ -58,16 +53,17 @@
             </div>
         </div>
     </div>
+
  	<%
  	if(list != null){
  		for(int i=0; i<list.size(); i++){
  	%>
  	<div class="col-md-3 class-list">
     	<div class="card zoom">
-        	<img class="card-img-top" src="<%=list.get(i).getImg() %>" style="width:100%" height="30%">
+        	<img class="card-img-top" src="../upload/parkjh.JPG" style="width:100%" height="30%">
         	<div class="body text-center">
-            	<p class="card-title">[<%=list.get(i).getBtype() %>]</p>
-        		<p class="card-text"><%=list.get(i).getDept() %> <%=list.get(i).getName() %></p>
+            	<p class="card-title">[신입사원 소개]</p>
+        		<p class="card-text">금융개발팀 박진형</p>
                 <a href="#" class="btn btn-warning">See Profile</a>
             </div>
         </div>

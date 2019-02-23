@@ -54,6 +54,6 @@ public class BListDTO {
 
 	@Override
 	public String toString() {
-		return "BListDTO [name=" + name + ", dept=" + dept + ", btyoe=" + btyoe + ", img=" + img + "]";
+		return "BListDTO [name=" + name + ", dept=" + dept + ", btype=" + btype + ", img=" + img + "]";
 	}
 }
