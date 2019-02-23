@@ -3,19 +3,21 @@ show databases;
 drop table member;
 
 create table member(
-	id		varchar(50)	not null	primary key,
+	id		varchar(30)	not null	primary key,
 	pw		varchar(16) not null,
 	name	varchar(10) not null,
 	birth	datetime	not null,
 	mno	int not null,
-	pno	varchar(20) not null,
+	position	varchar(10) not null,
 	jyear varchar(4) default "1900",
 	dno int default 0,
 	flag	char(1) default '0'
 );
 
+insert into member values ("pjhyng0125","1234","박진형","1994/01/25",1,"사원","2019",1,'1');
 desc member;
 alter table member add jyear varchar(4) default "1900";
+select * from member;
 
 create table board(
 	num int not null primary key auto_increment,
