@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@include file="../include/reference.jsp"%>
-title
+<title>bUpdateView.jsp</title>
 <!-- 
 	파일명: bUpdateView.jsp (board update view)
 	마지막 수정 날짜: 19/02/23  

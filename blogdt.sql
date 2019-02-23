@@ -62,7 +62,7 @@ create table boardtype(
 
 
 desc member;
-
+select name,dept,btype,img from member as m,board as b where m.id=b.id;
 
 
 
