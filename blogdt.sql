@@ -23,7 +23,7 @@ create table board(
 	title varchar(40) not null,
 	btno int not null,
 	img varchar(20) not null,
-	content text not null,
+	content text not null
 );
 
 create table dept(
