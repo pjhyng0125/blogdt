@@ -5,7 +5,7 @@
 <!-- 
 	파일명: bInsertView.jsp (board insert view)
 	마지막 수정 날짜: 19/02/23  
-	작성자: 최남우gg
+	작성자: 최남우
 	기능: 게시물 입력 화면
 -->
 
