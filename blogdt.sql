@@ -49,6 +49,7 @@ insert into board values (8,"daejun","안녕하세염 박형진입니다!","연�
 
 select * from board;
 
+update board set img="parkjh.jpg" where img="parkjh.JPG";
 
 <!--option2-->
 create table dept(

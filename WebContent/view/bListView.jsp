@@ -48,16 +48,6 @@
 <br>
 <!-- card 뿌려주기 시작! -->
   <div class="row">
-  	<div class="col-md-3 class-list">
-    	<div class="card zoom">
-        <img class="card-img-top" src="../upload/parkjh.JPG" style="width:100%" height="30%">
-        	<div class="body text-center">
-            	<p class="card-title">[신입사원 소개]</p>
-        		<p class="card-text">금융개발팀 박진형</p>
-                <a href="#" class="btn btn-warning">See Profile</a>
-            </div>
-        </div>
-    </div>
  	<%
  	if(list != null){
  		for(int i=0; i<list.size(); i++){
