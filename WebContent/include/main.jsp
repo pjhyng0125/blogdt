@@ -1,5 +1,3 @@
-<% request.setCharacterEncoding("utf-8"); %>
-
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -16,35 +14,50 @@
       }
       header, footer{
         padding: 1em;
-        color: white;
-        background-color:white;
+        color:white;
         clear:left;
         text-align:center;
       }
       ul{
       	list-style-type: none;
       }
-      #top_menu{
-      	margin: 40px 10px 0 0;
+      .top_menu{
+      	margin: 30px 10px 0 0;
       	float:right;
       }
-      #top_menu li{
+      .top_menu li{
       	display:inline;
+      }
+      .welcome{
+        float:right;
+        
+      }
+      .top{
+        display: inline;
+      }
+      .logo{
+        text-align: center;
+        display: block;
       }
     </style>
 
   </head>
   <body>
-    <div class="container">
-      <header>
-      <h1><img src="../img/logo.PNG" width="300"></h1>
-      </header>
-      <ul id="top_menu">
-      <li> <a href="#"><img src="../img/png/writing.png" width="70"></a></li>
-      <li> <a href="#"><img src="../img/png/history.png" width="70"></a></li>
-      <li> <a href="#"><img src="../img/png/statistics.png" width="70"></a></li>
-      <li> <a href="#"><img src="../img/png/logout.png" width="50"></a></li>
-      
+  <div class="container">
+    <div class="welcome">
+      <p>Hello .</p>
+    </div>
+    <div class="logo">
+      <img src="../img/logo.png" width = "300">
+    </div>
+    <div class="top_menu">
+      <ul>
+      <li><a href="#"><img src="../img/png/writing.png" width="70"></a></li>
+      <li><a href="#"><img src="../img/png/history.png" width="70"></a></li>
+      <li><a href="#"><img src="../img/png/statistics.png" width="70"></a></li>
+      <li><a href="#"><img src="../img/png/logout.png" width="35"></a></li>
       </ul>
+    </div>
+  </div>
   </body>
 </html>
