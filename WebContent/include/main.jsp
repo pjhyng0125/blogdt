@@ -40,10 +40,10 @@
       <h1><img src="../img/logo.PNG" width="300"></h1>
       </header>
       <ul id="top_menu">
-      <li> <button onclick="location=#"><img src="../"></button></li>
-      <li> <button onclick="location=#">History</button></li>
-      <li> <button onclick="location=#">Statistics</button></li>
-      <li> <button onclick="location=#">Log_Out</button></li>
+      <li> <a href="#"><img src="../img/png/writing.png" width="50"></a></li>
+      <li> <a href="#"><img src="../img/png/history.png" width="50"></a></li>
+      <li> <a href="#"><img src="../img/png/statistics.png" width="50"></a></li>
+      <li> <a href="#"><img src="../img/png/logout.png" width="50"></a></li>
       
       </ul>
   </body>
