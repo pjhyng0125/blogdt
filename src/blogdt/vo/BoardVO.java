@@ -8,6 +8,14 @@ public class BoardVO {
 	private String img;
 	private String content;
 	
+	/**
+	 * @param num : 삽입 시 아무거나. 0 넣으면 됨.
+	 * @param id : 필수
+	 * @param title : null 가능.
+	 * @param btype : 필수
+	 * @param img : null 가능.
+	 * @param content : 필수
+	 */
 	public BoardVO(int num, String id, String title, String btype, String img, String content) {
 		super();
 		this.num = num;
