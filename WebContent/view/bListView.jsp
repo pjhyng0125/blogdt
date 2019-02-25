@@ -60,7 +60,7 @@
         	<div class="body text-center">
             	<p class="card-title">[<%=list.get(i).getBtype() %>]</p>
         		<p class="card-text"><%=list.get(i).getDept() %> <%=list.get(i).getName() %></p>
-                <a href="bContentView.jsp?num=<%=list.get(i).getNum() %>" class="btn btn-warning">See Profile<%=list.get(i).getNum() %></a>
+                <a href="bContentView.jsp?num=<%=list.get(i).getNum() %>" class="btn btn-warning">See More<%=list.get(i).getNum() %></a>
             </div>
         </div>
     </div>
