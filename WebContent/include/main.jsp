@@ -40,9 +40,9 @@
       <h1><img src="../img/logo.PNG" width="300"></h1>
       </header>
       <ul id="top_menu">
-      <li> <a href="#"><img src="../img/png/writing.png" width="50"></a></li>
-      <li> <a href="#"><img src="../img/png/history.png" width="50"></a></li>
-      <li> <a href="#"><img src="../img/png/statistics.png" width="50"></a></li>
+      <li> <a href="#"><img src="../img/png/writing.png" width="70"></a></li>
+      <li> <a href="#"><img src="../img/png/history.png" width="70"></a></li>
+      <li> <a href="#"><img src="../img/png/statistics.png" width="70"></a></li>
       <li> <a href="#"><img src="../img/png/logout.png" width="50"></a></li>
       
       </ul>
