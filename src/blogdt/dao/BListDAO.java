@@ -42,7 +42,7 @@ public class BListDAO {
 		List<BListDTO> list=null;	//select 결과가 저장되어 반환될 List
 		
 		conn=getConnection();
-		String sql="select name,dept,btype,img from member as m, board as b where m.id=b.id";
+		String sql="select name,num,dept,btype,img from member as m, board as b where m.id=b.id";
 		pstmt=conn.prepareStatement(sql);
 		rs=pstmt.executeQuery();
 		
@@ -52,9 +52,9 @@ public class BListDAO {
 				BListDTO dto=new BListDTO();
 				dto.setName(rs.getString("name"));
 				dto.setDept(rs.getString("dept"));
+				dto.setNum(rs.getInt("num"));
 				dto.setBtype(rs.getString("btype"));
 				dto.setImg(rs.getString("img"));
-				System.out.println(dto.getImg());
 				list.add(dto);
 			}while(rs.next());
 		}
