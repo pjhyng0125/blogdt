@@ -28,16 +28,4 @@
 		<nature>org.eclipse.jdt.core.javanature</nature>
 		<nature>org.eclipse.wst.jsdt.core.jsNature</nature>
 	</natures>
-	<linkedResources>
-		<link>
-			<name>WebContent/view/parkjh.jpg</name>
-			<type>1</type>
-			<locationURI>PARENT-3-PROJECT_LOC/Desktop/IDT_%EB%B0%95%EC%A7%84%ED%98%95/03%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8/%EC%82%AC%EC%A7%84/parkjh.jpg</locationURI>
-		</link>
-		<link>
-			<name>WebContent/WEB-INF/lib/mysql-connector-java-5.1.47-bin.jar</name>
-			<type>1</type>
-			<locationURI>PARENT-5-PROJECT_LOC/Program%20Files/Java/jdk1.8.0_201/lib/mysql-connector-java-5.1.47-bin.jar</locationURI>
-		</link>
-	</linkedResources>
 </projectDescription>
