@@ -5,7 +5,7 @@
 <!-- 
 	파일명: loginView.jsp (login view)
 	마지막 수정 날짜: 19/02/23  
-	작성자: 이승찬
+	작성자: 이승xxxxx
 	기능: 로그인 화면
 -->
 </head>
