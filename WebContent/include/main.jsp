@@ -48,7 +48,7 @@
       <p>Hello .</p>
     </div>
     <div class="logo">
-      <img src="../img/logo.png" width = "300">
+      <img src="../img/logo.PNG" width = "300">
     </div>
     <div class="top_menu">
       <ul>
