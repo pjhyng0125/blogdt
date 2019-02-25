@@ -29,12 +29,12 @@
 %>
 
 </head>
-<body>
+<%@include file="../include/main.jsp"%>
+<article>
 <div class="container">
 <form>
 	<div class="group">
 			<select name="select" id="select" required="required">
-				<option value="0">==선택==</option>
 				<option value="1">전체보기</option>
 				<option value="2">신입사원 소개</option>
 				<option value="3">선배님들 조언</option>
@@ -70,4 +70,5 @@
  	%>
   </div><!-- row -->
 </div><!-- Container -->
+</article>
 <%@include file="../include/footer.jsp"%>

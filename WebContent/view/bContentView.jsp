@@ -41,7 +41,7 @@
 </script>
 
 </head>
-<body> 
+<%@include file="../include/main.jsp"%>
 
 <div class="container">
   <h1><%=title %></h1>
@@ -59,7 +59,7 @@
         </div>  
       </div>
       <div class="col-sm-6 bg-warning">
-        %Board의 Content를 뿌려줄 영역입니당 
+          ※ Board의 Content를 뿌려줄 영역입니당 
         <%=dto.getContent() %>  
       </div>
     </div>

@@ -41,7 +41,6 @@
       }
     </style>
 
-  </head>
   <body>
   <div class="container">
     <div class="welcome">
@@ -59,5 +58,3 @@
       </ul>
     </div>
   </div>
-  </body>
-</html>
