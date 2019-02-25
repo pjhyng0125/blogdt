@@ -39,10 +39,10 @@
 			<div class="group">
 				<select name="btname">
 					<option value="0">선택</option>
-					<%
-						if (selected == "신입사원 소개") {
+					<%	
+						if (selected.equals("신입사원 소개")) {
 					%>
-					<option value="1" selected>>신입사원 소개</option>
+					<option value="1" selected>신입사원 소개</option>
 					<%
 						} else {
 					%>
@@ -52,9 +52,9 @@
 					%>
 
 					<%
-						if (selected == "선배님 조언") {
+						if (selected.equals("선배님 조언")) {
 					%>
-					<option value="2" selected>>선배님 조언</option>
+					<option value="2" selected>선배님 조언</option>
 					<%
 						} else {
 					%>
@@ -64,9 +64,9 @@
 					%>
 
 					<%
-						if (selected == "아시아나IDT 기술 소개") {
+						if (selected.equals("아시아나IDT 기술 소개")) {
 					%>
-					<option value="3" selected>>아시아나IDT 기술 소개</option>
+					<option value="3" selected>아시아나IDT 기술 소개</option>
 					<%
 						} else {
 					%>
@@ -76,9 +76,9 @@
 					%>
 
 					<%
-						if (selected == "연수원") {
+						if (selected.equals("연수원")) {
 					%>
-					<option value="4" selected>>연수원</option>
+					<option value="4" selected>연수원</option>
 					<%
 						} else {
 					%>

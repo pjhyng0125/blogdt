@@ -22,7 +22,7 @@
 		
 		<div class="group">
 		<select name="btname">
-					<option value="0">선택</option>
+					<option value="0" selected>선택</option>
 					<option value="1">신입사원 소개</option>
 					<option value="2">선배님 조언</option>
 					<option value="3">아시아나IDT 기술 소개</option>
