@@ -69,6 +69,6 @@
 	<button type="button" id="btupdate" class="btn btn-submit">게시물 수정</button>
 	<button type="button" id="btmain"  class="btn btn-cancel">목록으로</button>
   </div>
-</div>
+</div>  
 
 <%@include file="../include/footer.jsp"%>
