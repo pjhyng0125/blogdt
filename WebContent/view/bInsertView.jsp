@@ -17,7 +17,7 @@
 <!-- 클래스 정보 입력 -->
 		<div class="group">
 		<font color="#2196F3" size="2px">제목</font>
-		<input type="text" name="title" value="" readonly/>
+		<input type="text" name="title" value=""/>
 		</div>
 		
 		<div class="group">
