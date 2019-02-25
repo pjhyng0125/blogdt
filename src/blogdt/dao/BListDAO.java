@@ -10,6 +10,7 @@ import javax.naming.Context;
 import javax.naming.InitialContext;
 import javax.sql.DataSource;
 
+import blogdt.dto.BContentDTO;
 import blogdt.dto.BListDTO;
 
 /* 
@@ -34,6 +35,7 @@ public class BListDAO {
 		return ds.getConnection();
 	}
 	
+	//박진형: 게시물 목록 화면 데이터 전체 select
 	public List<BListDTO> getBoardList() throws Exception{
 		Connection conn=null;
 		PreparedStatement pstmt=null;
@@ -62,6 +64,37 @@ public class BListDAO {
 		//결과값 없으면 board 테이블이 비어있는 상태이기 때문에 null 반환할 것!=> 예외 처리 해줘야 함.
 		return list;
 	}
+	
+	//박진형: 게시물 상세 화면 데이터 전체 select
+		public BContentDTO getBoardContent(int num) throws Exception{
+			Connection conn=null;
+			PreparedStatement pstmt=null;
+			ResultSet rs=null;
+			
+			BContentDTO dto=null;	//select 결과가 저장되어 반환될 BContentDTO
+			
+			conn=getConnection();
+			String sql="select jyear,btype,title,dept,name,position,img,content from member as m,board as b where num=? and m.id=b.id";
+			pstmt=conn.prepareStatement(sql);
+			pstmt.setInt(1, num);
+			rs=pstmt.executeQuery();
+			
+			if(rs.next()) {//만약 결과값이 있다면
+					dto=new BContentDTO();
+					dto.setJyear(rs.getString("jyear"));
+					dto.setBtype(rs.getString("btype"));
+					dto.setTitle(rs.getString("title"));
+					dto.setDept(rs.getString("dept"));
+					dto.setName(rs.getString("name"));
+					dto.setPosition(rs.getString("position"));
+					dto.setImg(rs.getString("img"));
+					dto.setContent(rs.getString("content"));
+			}
+			System.out.println(dto);
+			//결과값 없으면 board 테이블이 비어있는 상태이기 때문에 null 반환할 것!=> 예외 처리 해줘야 함.
+			return dto;
+		}
+	
 }
 
 
