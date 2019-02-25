@@ -36,7 +36,7 @@ public class BoardDAO {
 		PreparedStatement pstmt = null;
 		try {
 			conn = getConnection();
-			pstmt = conn.prepareStatement("insert into board value(?,?,?,?,?)");
+			pstmt = conn.prepareStatement("insert into board (id,title,btype,img,content) value(?,?,?,?,?)");
 			pstmt.setString(1, board.getId());
 			pstmt.setString(2, board.getTitle());
 			pstmt.setString(3, board.getBtype());
@@ -80,9 +80,9 @@ public class BoardDAO {
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
-			if(rs!= null) try { rs.close(); }catch(SQLException ex) { System.err.println(ex.getMessage());}
-			if (pstmt != null) try { pstmt.close(); }catch (SQLException ex) { System.err.println(ex.getMessage()); }
-			if (conn != null) try { conn.close(); } catch (SQLException ex) { System.err.println(ex.getMessage()); }
+			if(rs!= null) try { rs.close(); }catch(SQLException ex) { }
+			if (pstmt != null) try { pstmt.close(); }catch (SQLException ex) { }
+			if (conn != null) try { conn.close(); } catch (SQLException ex) { }
 		}
 		return board;
 	}
