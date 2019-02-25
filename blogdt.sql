@@ -46,6 +46,8 @@ insert into board values (5,"pjhyng0125","안녕하세염 박진형입니다!","
 insert into board values (6,"phjhj","안녕하세염 박형진입니다!","연수원","parkhj.jpg","이건 내용쓰ㅎㅎ내에에에엥용");
 insert into board values (7,"phjhj","안녕하세염 박형진입니다!","연수원","parkhj.jpg","이건 내용쓰ㅎㅎ내에에에엥용");
 insert into board values (8,"daejun","안녕하세염 박형진입니다!","연수원","daejun.jpg","이건 내용쓰ㅎㅎ내에에에엥용");
+insert into board values (9,"daejun","안녕하세염 박형진입니다!","연수원","daejun.jpg","이건 내용쓰ㅎㅎ내에에에엥용");
+
 
 select * from board;
 

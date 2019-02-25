@@ -1,4 +1,5 @@
 package blogdt.vo;
+import java.sql.Date;
 
 import java.sql.Date;
 
@@ -12,8 +13,8 @@ public class MemberVO {
 	private String jyear; //null
 	private String dept;//null
 	private char flag; //null
-	
-	
+
+
 	public MemberVO() {
 		super();
 	}
@@ -201,6 +202,6 @@ public class MemberVO {
 			return false;
 		return true;
 	}
-	
-	
+
+
 }

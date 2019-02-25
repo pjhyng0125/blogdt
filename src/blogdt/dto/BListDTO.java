@@ -5,6 +5,7 @@ public class BListDTO {
 	private String name;
 	private String dept;
 	// board
+	private int num;
 	private String btype;
 	private String img;
 
@@ -18,6 +19,14 @@ public class BListDTO {
 		this.dept = dept;
 		this.btype = btype;
 		this.img = img;
+	}
+
+	public int getNum() {
+		return num;
+	}
+
+	public void setNum(int num) {
+		this.num = num;
 	}
 
 	public String getName() {

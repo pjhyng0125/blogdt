@@ -52,13 +52,15 @@
  	if(list != null){
  		for(int i=0; i<list.size(); i++){
  	%>
+
  	<div class="col-md-3 class-list">
+ 		<input type="hidden" id="">
     	<div class="card zoom">
         	<img class="card-img-top" src="<%=list.get(i).getImg() %>" style="width:100%" height="30%">
         	<div class="body text-center">
             	<p class="card-title">[<%=list.get(i).getBtype() %>]</p>
         		<p class="card-text"><%=list.get(i).getDept() %> <%=list.get(i).getName() %></p>
-                <a href="#" class="btn btn-warning">See Profile</a>
+                <a href="bContentView.jsp?num=<%=list.get(i).getNum() %>" class="btn btn-warning">See More<%=list.get(i).getNum() %></a>
             </div>
         </div>
     </div>
