@@ -62,8 +62,8 @@
 		        allowPointSelect: true,
 		        keys: ['name', 'y', 'selected', 'sliced'],
 		        data: [
-		            ['컴퓨터 소프트웨어학', 4, false],
-		            ['컴퓨터 공학', 5, false],
+		            ['소프트웨어학', 4, false],
+		            ['컴퓨터공학', 5, false],
 		            ['정보통신학', 6, false],
 		            ['경영학', 2, false],
 		            ['경제학', 1, false]
