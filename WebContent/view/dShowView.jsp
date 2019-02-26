@@ -1,3 +1,5 @@
+<%@page import="java.util.List"%>
+<%@page import="blogdt.dao.SatisDAO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@include file="../include/reference.jsp"%>
@@ -9,25 +11,32 @@
 	기능: DB 내의 유의미한 data를 시각화해서 도표로 보여주는 통계 화면
 -->
 <script src="http://code.highcharts.com/highcharts.js"></script>
+<%
+	List<Integer> list=null;
+	List<Integer> list2=null;
+	SatisDAO dao=SatisDAO.getInstance();
+	list=dao.getMajor();
+	list2=dao.getAge();
+%>
 <title>Insert title here</title>
 <script type="text/javascript">
 	$(function () {
-		showAge();
+		showMajor();
+		$('#btmajor').click(function(){
+			showMajor();
+		});
 		$('#btage').click(function(){
 			showAge();
 		});
-		$('#btgu').click(function(){
-			showInterest();
-		});
-		$('#btact').click(function(){
+		$('#btsex').click(function(){
 			showAct();
 		});
-		$('#btmypage').click(function(){
+		$('#btmain').click(function(){
 			location.href="bListView.jsp";
 		});
 	});//function
 //카테고리 n개/ 카테고리당 수치 n개
-	function showInterest(){
+	function showAge(){
 		$('#test').highcharts({
 			chart:{
 				type: 'column'
@@ -45,12 +54,12 @@
 			},
 			series: [{
 				name: '신입사원 나이',
- 				data: [2,1,4,1,1,1,1]
+ 				data: [<%=list2.get(0)%>,<%=list2.get(1)%>,<%=list2.get(2)%>,<%=list2.get(3)%>,<%=list2.get(4)%>,<%=list2.get(5)%>,<%=list2.get(6)%>]
 			}]
 		});
-	}//showInterest
+	}//showAge
 //나이 수치 6개
-	function showAge(){
+	function showMajor(){
 		Highcharts.chart('test', {
 
 		    title: {
@@ -62,18 +71,17 @@
 		        allowPointSelect: true,
 		        keys: ['name', 'y', 'selected', 'sliced'],
 		        data: [
-		            ['컴퓨터 소프트웨어학', 4, false],
-		            ['컴퓨터 공학', 5, false],
-		            ['정보통신학', 6, false],
-		            ['경영학', 2, false],
-		            ['경제학', 1, false]
+		            ['소프트웨어학', <%=list.get(0) %>, false],
+		            ['컴퓨터공학', <%=list.get(1) %>, false],
+		            ['정보통신학', <%=list.get(2) %>, false],
+		            ['경영학', <%=list.get(3) %>, false]
 		        ],
 		        showInLegend: true
 		    }]
 		});
-	}//showAge
+	}//showMajor
 //실내활동/야외활동 수치 2개
-	function showAct(){
+	function showSex(){
 		$('#test').highcharts({
 			chart:{
 				type: 'bar'
@@ -105,13 +113,12 @@
 <form>
 	<h1>Career Info 통계</h1>
 	<div class="btn-box">
-		<button type="button" class="btn btn-submit" id="btage">전공</button>
-		<button type="button" class="btn btn-submit" id="btgu">나이</button>
-		<button type="button" class="btn btn-submit" id="btact">성비</button>
+		<button type="button" class="btn btn-submit" id="btmajor">전공</button>
+		<button type="button" class="btn btn-submit" id="btage">나이</button>
 	</div>
 	<div id="test" style="width:100%; height:400px;"></div>
 	<div class="btn-box">
-		<button type="button" class="btn btn-cancel" id="btmypage">마이페이지 화면으로</button>
+		<button type="button" class="btn btn-cancel" id="btmain">메인으로</button>
 	</div>
 </form>
 </div>
