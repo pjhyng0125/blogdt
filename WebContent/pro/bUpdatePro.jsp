@@ -36,7 +36,6 @@
 		try {
 			realFolder = context.getRealPath(saveFolder);
 			multi = new MultipartRequest(request, realFolder, maxSize, encType, new DefaultFileRenamePolicy());
-			int num = Integer.parseInt(multi.getParameter("num"));
 			String tit = multi.getParameter("title");
 			String cat = multi.getParameter("btname");
 			switch (cat) {
@@ -60,7 +59,7 @@
 			String con = multi.getParameter("content");
 
 			BoardDAO dao = BoardDAO.getInstance();
-			dao.insertBoard(new BoardVO(0, id, tit, cat, img, con));
+			dao.updateBoard(new BoardVO(0, id, tit, cat, img, con));
 
 		} catch (Exception e) {
 			returnPage = "500code.jsp";

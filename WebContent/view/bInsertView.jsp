@@ -8,25 +8,33 @@
 	작성자: 최남우
 	기능: 게시물 입력 화면
 -->
-<script
-	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script>
 	$(function() {
 		$("#btn_ok").click(function() {
-			var form = $("form")[0];
-			var formData = new FormData(form);
-			$.ajax({
-				url : "bInsertPro.jsp",
-				type : "POST",
-				data : formData,
-				success : function(data) {
-					alert(data); // 입력 성공
-				},
-				error : function(xhr, textStatus, errorThrown) {
-					alert(xhr.status);
-					alert(thrownError);
-				}
-			});
+			alert("게시글이 저장되었습니다");
+			// var form = $("form")[0];
+// 			var formData = new FormData(form);
+// 			$.ajax({
+// 				url : "bInsertPro.jsp",
+// 				type : "POST",
+// 				data : formData,
+// 				success : function(data) {
+// 					alert(data); // 입력 성공
+// 				},
+// 				error : function(xhr, textStatus, errorThrown) {
+// 					alert(xhr.status);
+// 					alert(thrownError);
+// 				}
+// 			});
+		});//btjoin click
+		
+		$("#btn_cn").click(function() {
+			var r = confirm("확인 버튼을 누르면 게시글을 저장하지 않고 뒤로 돌아갑니다. 작성을 취소 하시겠습니까?");
+			if (r == true) {
+			  location.href="/blogdt/view/bListView.jsp";
+			} else {
+			  
+			}
 		});//btjoin click
 	});//function
 </script>
@@ -62,8 +70,8 @@
 				<span class="highlight"></span><span class="bar"></span> <label>내용</label>
 			</div>
 			<div class="btn-box">
-				<button type="submit" class="btn btn-submit">저장</button>
-				<button type="button" class="btn btn-submit">취소</button>
+				<button type="submit" class="btn btn-submit" id="btn_ok">작성 완료</button>
+				<button type="button" class="btn btn-submit" id="btn_cn">작성 취소</button>
 			</div>
 		</form>
 	</div>
