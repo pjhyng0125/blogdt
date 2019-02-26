@@ -60,7 +60,6 @@ public class BListDAO {
 				list.add(dto);
 			}while(rs.next());
 		}
-		System.out.println(list.size());
 		//결과값 없으면 board 테이블이 비어있는 상태이기 때문에 null 반환할 것!=> 예외 처리 해줘야 함.
 		return list;
 	}
@@ -90,7 +89,6 @@ public class BListDAO {
 					dto.setImg(rs.getString("img"));
 					dto.setContent(rs.getString("content"));
 			}
-			System.out.println(dto);
 			//결과값 없으면 board 테이블이 비어있는 상태이기 때문에 null 반환할 것!=> 예외 처리 해줘야 함.
 			return dto;
 		}
