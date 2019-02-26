@@ -47,17 +47,17 @@
   </head>
   <body>
   <div class="container">
-  	<div class="log"><a href="#"><img src="../img/png/logout.png" width="35"></a></div>
+  	<div class="log"><a href="#"><img src="../img/png/logout.png" width="40"></a></div>
     <div class="welcome"><p>Hello .</p></div>
     
     <div class="logo">
-      <img src="../img/logo.PNG" width = "300">
+      <img src="../img/png/logo2.png" width = "350">
     </div>
     <div class="top_menu">
       <ul>
-      <li><a href="#"><img src="../img/png/writing.png" width="70"></a></li>
-      <li><a href="#"><img src="../img/png/history.png" width="70"></a></li>
-      <li><a href="#"><img src="../img/png/statistics.png" width="70"></a></li>
+      <li><a href="#"><img src="../img/png/writing2.png" width="50"></a></li>
+      <li><a href="#"><img src="../img/png/history2.png" width="50"></a></li>
+      <li><a href="#"><img src="../img/png/statistics2.png" width="50"></a></li>
       </ul>
     </div>
   </div>
