@@ -1,97 +1,100 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%> 
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%> 
     
-<%-- ÀÚ¹Ùºó Å¬·¡½º import --%>      
-<%@ page import="jsp.member.model.MemberBean" %>  
+<%-- ìžë°”ë¹ˆ í´ëž˜ìŠ¤ import --%>      
+<%@ page import="blogdt.vo.MemberVO" %>
 <%-- DAO import --%>   
-<%@ page import="jsp.member.model.MemberDAO" %> 
-
+<%@ page import="blogdt.dao.MemberDAO" %>
 <html>
 <head>
-	<title>È¸¿ø°¡ÀÔ Ã³¸® JSP</title>
+	<title>íšŒì›ê°€ìž… ì²˜ë¦¬ JSP</title>
 	
-	<!-- css ÆÄÀÏ ºÐ¸® -->
+	<!-- css íŒŒì¼ ë¶„ë¦¬ -->
 	<link href='../../css/join_style.css' rel='stylesheet' style='text/css'/>
 	
 </head>
 <body>
-	<%-- JoinForm.jsp¿¡¼­ ÀÔ·ÂÇÑ Á¤º¸¸¦ ³Ñ°Ü ¹Þ¾Æ Ã³¸®ÇÑ´Ù. --%>
+	<%-- JoinForm.jspì—ì„œ ìž…ë ¥í•œ ì •ë³´ë¥¼ ë„˜ê²¨ ë°›ì•„ ì²˜ë¦¬í•œë‹¤. --%>
 	<% 
-		// ÇÑ±Û ±úÁüÀ» ¹æÁöÇÏ±â À§ÇÑ ÀÎÄÚµù Ã³¸®
-		request.setCharacterEncoding("euc-kr"); 
+		// í•œê¸€ ê¹¨ì§ì„ ë°©ì§€í•˜ê¸° ìœ„í•œ ì¸ì½”ë”© ì²˜ë¦¬
+		request.setCharacterEncoding("utf-8"); 
 	%>
 	
-	<%-- ÀÚ¹Ùºó °ü·Ã ¾×¼ÇÅÂ±× »ç¿ë --%>
-	<jsp:useBean id="memberBean" class="jsp.member.model.MemberBean" />
-	<jsp:setProperty property="*" name="memberBean"/>	
-	
+	<%-- ìžë°”ë¹ˆ ê´€ë ¨ ì•¡ì…˜íƒœê·¸ ì‚¬ìš© --%>
+	<jsp:useBean id="memberVo" class="blogdt.vo.MemberVO">
+	<jsp:setProperty name="memberVo" property="*"/>
+<%-- 	<jsp:setProperty name="memberVo" property="id"/>	
+	<jsp:setProperty name="memberVo" property="pw"/>
+	<jsp:setProperty name="memberVo" property="name"/>
+	<jsp:setProperty name="memberVo" property="jyear"/>
+	<jsp:setProperty name="memberVo" property="major"/>
+	<jsp:setProperty name="memberVo" property="position"/>
+	<jsp:setProperty name="memberVo" property="dept"/>
+	<jsp:setProperty name="memberVo" property="birth"/> --%>
+	</jsp:useBean>
 	<%
 		MemberDAO dao = MemberDAO.getInstance();
-	
-		// È¸¿øÁ¤º¸¸¦ ´ã°íÀÖ´Â memberBeanÀ» daoÀÇ insertMember() ¸Þ¼­µå·Î ³Ñ±ä´Ù.
-		// insertMember()´Â È¸¿ø Á¤º¸¸¦ JSP_MEMBER Å×ÀÌºí¿¡ ÀúÀåÇÑ´Ù.
-		dao.insertMember(memberBean);
+
+		 dao.insertMember(memberVo);
 	%>
 	
 	<div id="wrap">
 		<br><br>
-		<b><font size="5" color="gray">È¸¿ø°¡ÀÔ Á¤º¸¸¦ È®ÀÎÇÏ¼¼¿ä.</font></b>
+		<b><font size="5" color="gray">íšŒì›ê°€ìž… ì •ë³´ë¥¼ í™•ì¸í•˜ì„¸ìš”.</font></b>
 		<br><br>
-		<font color="blue"><%=memberBean.getName() %></font>´Ô °¡ÀÔÀ» ÃàÇÏµå¸³´Ï´Ù.
+		<font color="blue"><%=memberVo.getName() %></font>ë‹˜ ê°€ìž…ì„ ì¶•í•˜ë“œë¦½ë‹ˆë‹¤.
 		<br><br>
 		
-		<%-- ÀÚ¹Ùºó¿¡¼­ ÀÔ·ÂµÈ °ªÀ» ÃßÃâÇÑ´Ù. --%>
+		<%-- ìžë°”ë¹ˆì—ì„œ ìž…ë ¥ëœ ê°’ì„ ì¶”ì¶œí•œë‹¤. --%>
 		<table>
 			<tr>
-				<td id="title">¾ÆÀÌµð</td>
-				<td><%=memberBean.getId() %></td>
+				<td id="title">ì•„ì´ë””</td>
+				<td><%=memberVo.getId() %></td>
 			</tr>
 						
 			<tr>
-				<td id="title">ºñ¹Ð¹øÈ£</td>
-				<td><%=memberBean.getPassword() %></td>
+				<td id="title">ë¹„ë°€ë²ˆí˜¸</td>
+				<td><%=memberVo.getPw() %></td>
 			</tr>
 					
 			<tr>
-				<td id="title">ÀÌ¸§</td>
-				<td><%=memberBean.getName() %></td>
+				<td id="title">ì´ë¦„</td>
+				<td><%=memberVo.getName() %></td>
 			</tr>
 					
 			<tr>
-				<td id="title">¼ºº°</td>
-				<td><%=memberBean.getGender()%></td>
+				<td id="title">ìƒë…„ì›”ì¼</td>
+				<td><%=memberVo.getBirth()%></td>
 			</tr>
 					
 			<tr>
-				<td id="title">»ýÀÏ</td>
+				<td id="title">ì „ê³µ</td>
 				<td>
-					<%=memberBean.getBirthyy() %>³â 
-					<%=memberBean.getBirthmm() %>¿ù 
-					<%=memberBean.getBirthdd() %>ÀÏ
+					<%=memberVo.getMajor() %>
 				</td>
 			</tr>
 					
 			<tr>
-				<td id="title">ÀÌ¸ÞÀÏ</td>
+				<td id="title">ì§ì±…</td>
 				<td>
-					<%=memberBean.getMail1() %>@<%=memberBean.getMail2() %>
+					<%=memberVo.getPosition() %>
 				</td>
 			</tr>
 					
 			<tr>
-				<td id="title">ÈÞ´ëÀüÈ­</td>
-				<td><%=memberBean.getPhone() %></td>
+				<td id="title">ìž…ì‚¬ë…„ë„</td>
+				<td><%=memberVo.getJyear() %></td>
 			</tr>
 			<tr>
-				<td id="title">ÁÖ¼Ò</td>
+				<td id="title">ë¶€ì„œ</td>
 				<td>
-					<%=memberBean.getAddress() %>
+					<%=memberVo.getDept() %>
 				</td>
 			</tr>
 		</table>
 		
 		<br>
-		<input type="button" value="È®ÀÎ">
+		<input type="button" value="í™•ì¸">
 	</div>
 </body>
 </html>

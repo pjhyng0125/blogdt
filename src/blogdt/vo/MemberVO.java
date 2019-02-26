@@ -1,13 +1,14 @@
 package blogdt.vo;
 import java.sql.Date;
-
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.sql.Date;
 
 public class MemberVO {
 	private String id;
 	private String pw;
 	private String name;
-	private Date birth;
+	private String birth;
 	private String major;
 	private String position;
 	private String jyear; //null
@@ -20,7 +21,7 @@ public class MemberVO {
 	}
 
 
-	public MemberVO(String id, String pw, String name, Date birth, String major, String position, String jyear,
+	public MemberVO(String id, String pw, String name, String birth, String major, String position, String jyear,
 			String dept, char flag) {
 		super();
 		this.id = id;
@@ -65,12 +66,12 @@ public class MemberVO {
 	}
 
 
-	public Date getBirth() {
+	public String getBirth() {
 		return birth;
 	}
 
 
-	public void setBirth(Date birth) {
+	public void setBirth(String birth) {
 		this.birth = birth;
 	}
 

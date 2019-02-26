@@ -1,8 +1,11 @@
 package blogdt.dao;
 import java.sql.Connection;
+import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 
 import javax.naming.NamingException;
 
@@ -28,7 +31,7 @@ public class MemberDAO
     // java.util.Date클래스로는 오라클의 Date형식과 연동할 수 없다.
     // Oracle의 date형식과 연동되는 java의 Date는 java.sql.Date 클래스이다.
     // 회원정보를 JSP_MEMBER 테이블에 저장하는 메서드
-    public void insertMember(MemberVO member) throws SQLException
+    public void insertMember(MemberVO member) throws SQLException, ParseException
     {
         Connection conn = null;
         PreparedStatement pstmt = null;
@@ -49,11 +52,12 @@ public class MemberDAO
              * StringBuffer에 담긴 값을 얻으려면 toString()메서드를
              * 이용해야 한다.
              */
+    		
             pstmt = conn.prepareStatement(sql.toString());
             pstmt.setString(1, member.getId());
             pstmt.setString(2, member.getPw());
             pstmt.setString(3, member.getName());
-            pstmt.setDate(4, member.getBirth());
+            pstmt.setString(4, member.getBirth());
             pstmt.setString(5,member.getMajor()); 
             pstmt.setString(6, member.getPosition());
             pstmt.setString(7, member.getJyear());
@@ -107,8 +111,8 @@ public class MemberDAO
             {
                 dbPW = rs.getString("pw"); // 비번을 변수에 넣는다.
  
-                System.out.println(pw);
-                System.out.println(dbPW);
+                /*System.out.println(pw);
+                System.out.println(dbPW);*/
                 if (dbPW.equals(pw)) 
                     x = 1; // 넘겨받은 비번과 꺼내온 배번 비교. 같으면 인증성공
                 else                  
