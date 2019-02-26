@@ -28,7 +28,7 @@ form {
   margin: 45px auto;
 }
 form h1 {
-  font-size: 3em;
+  font-size: 2em;
   font-weight: 300;
   text-align: center;
   color: #ef000f;
