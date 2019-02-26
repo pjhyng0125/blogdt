@@ -1,7 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@include file="../include/reference.jsp"%>
-<head>
 <script type="text/javascript">
 	function pos_change() {
 		var pos = document.getElementById("position");
@@ -12,9 +11,6 @@
 			document.getElementById("team").style.display = "block";
 		}
 	}
-</script>
-
-<script>
 	function validate() {
 		var re = /^[a-zA-Z0-9]{4,12}$/ // 아이디와 패스워드가 적합한지 검사할 정규식
 		//    var re2 = /^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*.[a-zA-Z]{2,3}$/i;
@@ -91,8 +87,7 @@
 </head>
 <body>
 	<div class="container">
-		<form name="join" onsubmit="return validate();"
-			action="../pro/JoinPro.jsp" method="post">
+		<form name="join" onsubmit="return validate();" action="../pro/JoinPro.jsp" method="post" novalidate>
 		<h1>회원 가입</h1>
 			<br>
 			<div class="group">
@@ -155,8 +150,8 @@
 				</div>
 
 				<div class="group">
-					<select name="dept" name="dept" required="required" id="dept">
-						<option value=""></option>
+					<select name="dept" required="required" id="dept">
+						<option value="s"></option>
 						<option value="항공관리">항공관리</option>
 						<option value="항공영업">항공영업</option>
 						<option value="데이터센터">데이터센터</option>
