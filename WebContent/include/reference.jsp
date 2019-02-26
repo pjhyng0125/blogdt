@@ -31,7 +31,7 @@ form h1 {
   font-size: 3em;
   font-weight: 300;
   text-align: center;
-  color: #2196F3;
+  color: #ef000f;
 }
 form h5 {
   text-align: center;
@@ -39,7 +39,7 @@ form h5 {
   color: #424242;   
 }
 form hr.sep {
-  background: #2196F3;
+  background: #ef000f;
   box-shadow: none;
   border: none;
   height: 2px;
@@ -87,7 +87,7 @@ textarea:focus ~ label,
 textarea:valid ~ label {
   top: -14px;
   font-size: 12px;
-  color: #2196F3;
+  color: #ef000f;
 }
 input:focus ~ .bar:before,
 select:focus ~ .bar:before,
@@ -121,17 +121,16 @@ label {
   width: 0;
   bottom: 0px;
   position: absolute;
-  background: #2196F3;
+  background: #ef000f;
   transition: 300ms ease all;
   left: 0%;
 }
 
 .btn {
-  background: #fff;
+  background: #ef000f;
   color: #959595;
   border: none;
   padding: 10px 20px;
-  border-radius: 3px;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   text-decoration: none;
@@ -144,7 +143,7 @@ label {
   box-shadow: 0 7px 14px rgba(0, 0, 0, 0.18), 0 5px 5px rgba(0, 0, 0, 0.12);
 }
 .btn.btn-link {
-  background: #2196F3;
+  background: #ef000f;
   color: #d3eafd;
 }
 .btn.btn-link:hover {
@@ -152,8 +151,8 @@ label {
   color: #deeffd;
 }
 .btn.btn-submit {
-  background: #2196F3;
-  color: #bce0fb;
+  background: #ef000f;
+  color: #deeffd;
 }
 .btn.btn-submit:hover {
   background: #0d8aee;

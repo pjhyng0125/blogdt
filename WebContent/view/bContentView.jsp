@@ -37,6 +37,9 @@
 		$('#btupdate').click(function(){
 			location.href="bUpdateView.jsp?num="+<%=num %>;
 		});
+		$('#btmain').click(function(){
+			location.href="bListView.jsp";
+		});
 	});
 </script>
 
