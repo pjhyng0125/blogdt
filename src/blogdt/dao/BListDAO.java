@@ -12,6 +12,7 @@ import javax.sql.DataSource;
 
 import blogdt.dto.BContentDTO;
 import blogdt.dto.BListDTO;
+import blogdt.dto.BMyDTO;
 
 /* 
 파일명: BListDAO.java (Board List Data Access Object)
@@ -127,6 +128,38 @@ public class BListDAO {
 			}
 			//결과값 없으면 board 테이블이 비어있는 상태이기 때문에 null 반환할 것!=> 예외 처리 해줘야 함.
 			return dto;
+		}
+		
+		//박진형: 게시물 목록 화면 데이터 부분 select
+		public List<BMyDTO> getMyList(String id) throws Exception{
+			Connection conn=null;
+			PreparedStatement pstmt=null;
+			ResultSet rs=null;
+			
+			List<BMyDTO> list=null;	//select 결과가 저장되어 반환될 List
+			String sql=null;
+				conn=getConnection();
+			
+				sql="select num,id,title,btype from board where id=?";
+				pstmt=conn.prepareStatement(sql);
+				System.out.println(id);
+				pstmt.setNString(1, id);
+				rs=pstmt.executeQuery();
+					
+			if(rs.next()) {//만약 결과값이 있다면
+				list=new ArrayList<BMyDTO>();
+				do {
+					BMyDTO dto=new BMyDTO(
+						rs.getInt("num"),
+						rs.getString("id"),
+						rs.getString("title"),
+						rs.getString("btype")
+							);
+					list.add(dto);
+				}while(rs.next());
+			}
+			//결과값 없으면 board 테이블이 비어있는 상태이기 때문에 null 반환할 것!=> 예외 처리 해줘야 함.
+			return list;
 		}
 	
 }

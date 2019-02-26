@@ -38,11 +38,11 @@
 			if($("#selector").val()==1){
 				location.href="bListView.jsp?selector="+encodeURI('전체보기','UTF-8');
 			} else if($("#selector").val()==2){
-				location.href="bListView.jsp?selector="+encodeURI('신입사원소개','UTF-8');				
+				location.href="bListView.jsp?selector="+encodeURI('신입사원 소개','UTF-8');				
 			} else if($("#selector").val()==3){
-				location.href="bListView.jsp?selector="+encodeURI('선배님들조원','UTF-8');							
+				location.href="bListView.jsp?selector="+encodeURI('선배님들 조언','UTF-8');							
 			} else if($("#selector").val()==4){
-				location.href="bListView.jsp?selector="+encodeURI('아시아나IDT기술소개','UTF-8');											
+				location.href="bListView.jsp?selector="+encodeURI('아시아나IDT 기술소개','UTF-8');											
 			} else if($("#selector").val()==5){
 				location.href="bListView.jsp?selector="+encodeURI('연수원','UTF-8');;																
 			} else if($("#selector").val()==6){
