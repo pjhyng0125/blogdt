@@ -1,8 +1,4 @@
 package blogdt.vo;
-import java.sql.Date;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.sql.Date;
 
 public class MemberVO {
 	private String id;
