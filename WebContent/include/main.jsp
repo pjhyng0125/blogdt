@@ -29,11 +29,14 @@
       	display:inline;
       }
       .welcome{
-        float:right;
-        
+      	margin-right:10px;
+      	float:right;
+      }
+      .log{
+      	float:right;
       }
       .top{
-        display: inline;
+        display:inline;
       }
       .logo{
         text-align: center;
@@ -41,11 +44,12 @@
       }
     </style>
 
+  </head>
   <body>
   <div class="container">
-    <div class="welcome">
-      <p>Hello .</p>
-    </div>
+  	<div class="log"><a href="#"><img src="../img/png/logout.png" width="35"></a></div>
+    <div class="welcome"><p>Hello .</p></div>
+    
     <div class="logo">
       <img src="../img/logo.PNG" width = "300">
     </div>
@@ -54,7 +58,8 @@
       <li><a href="#"><img src="../img/png/writing.png" width="70"></a></li>
       <li><a href="#"><img src="../img/png/history.png" width="70"></a></li>
       <li><a href="#"><img src="../img/png/statistics.png" width="70"></a></li>
-      <li><a href="#"><img src="../img/png/logout.png" width="35"></a></li>
       </ul>
     </div>
   </div>
+  </body>
+</html>
