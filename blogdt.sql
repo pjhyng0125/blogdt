@@ -1,3 +1,5 @@
+/* ALTER TABLE board MODIFY img varchar(50); */
+
 show databases;
 
 drop table member;
