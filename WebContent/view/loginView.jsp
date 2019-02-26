@@ -47,8 +47,8 @@ button:hover {
 }
 
 img.avatar {
-  width: 40%;
-  border-radius: 50%;
+  width: 60%;
+  /* border-radius: 50%; */
 }
 
 .container {
@@ -126,17 +126,32 @@ span.psw {
   }
 }
 </style>
+
 </head>
 <body>
 
 <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">로그인</button>
+<% 
+			// 아이디, 비밀번호가 틀릴경우 화면에 메시지 표시
+			// LoginPro.jsp에서 로그인 처리 결과에 따른 메시지를 보낸다.
+			String msg=request.getParameter("msg");
+			
+			if(msg!=null && msg.equals("0")) // request.getAttribute("error") == "0" 
+			{
+				out.println("<script>alert('비밀번호를 확인해 주세요');</script>");
+			}
+			else if(msg!=null && msg.equals("-1")) //request.getAttribute("error") == "-1"
+			{	
+				out.println("<script>alert('아이디를 확인해 주세요.');</script>");;
+			}
+%>
 
 <div id="id01" class="modal">
   
   <form class="modal-content animate" action="../pro/LoginPro.jsp" method="post">
     <div class="imgcontainer">
       <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-      <img src="img_avatar2.png" alt="Avatar" class="avatar">
+      <img src="../img/png/CareerInfo_logo.png" alt="Avatar" class="avatar">
     </div>
 
     <div class="container">
@@ -150,7 +165,7 @@ span.psw {
     </div>
 
     <div class="container" style="background-color:#f1f1f1">
-      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">취소</button>
       <span class="psw"><a href="#">아이디 찾기</a>&nbsp&nbsp <a href="#">비밀번호 찾기</a></span>
     </div>
   </form>

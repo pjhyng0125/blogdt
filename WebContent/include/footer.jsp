@@ -6,7 +6,7 @@
           <div class="text-center">
             <a href="#home" class="scrollup" style="display: none;"><i class="fa fa-angle-up fa-3x"></i></a>
           </div>
-          &copy; BlogDT Corporation.
+          &copy; ASIANA IDT Corporation.
         </div>
        </div>
      </div>
