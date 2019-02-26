@@ -8,30 +8,38 @@
 	작성자: 최남우
 	기능: 게시물 입력 화면
 -->
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script>
 	$(function() {
-		$("#btn_ok").click(
-				function() {
-					var t = encodeURI($('#title').val(),"utf-8");
-					var s = encodeURI($('#category').find(":selected").text(),"utf-8");
-					var c = encodeURI($('#category').val(),"utf-8"); // 숫자로.
-					var i = encodeURI($('#img').val(),'utf-8');
-					var n = encodeURI($('#content').val(),"utf-8");
-					location.href = "../pro/bInsertPro.jsp?t=" + t + "&s=" + s + "&n=" + n + "&c=" + c + "&i=" + i;
-				});//btjoin click
+		$("#btn_ok").click(function() {
+			var form = $("form")[0];
+			var formData = new FormData(form);
+			$.ajax({
+				url : "bInsertPro.jsp",
+				type : "POST",
+				data : formData,
+				success : function(data) {
+					alert(data); // 입력 성공
+				},
+				error : function(xhr, textStatus, errorThrown) {
+					alert(xhr.status);
+					alert(thrownError);
+				}
+			});
+		});//btjoin click
 	});//function
 </script>
 
 </head>
 <body>
 	<div class="container">
-		<form enctype="multipart/form-data" method="post">
+		<form enctype="multipart/form-data" method="post" action="../pro/bInsertPro.jsp">
 			<h1>게시물 등록 화면</h1>
 			<br>
 			<!-- 클래스 정보 입력 -->
 			<div class="group">
-				<font color="#2196F3" size="2px">제목</font> <input type="text"
-					name="title" id="title" value="" />
+				<input type="text" name="title" id="title" value="" /><label>제목</label>
 			</div>
 
 			<div class="group">
@@ -54,9 +62,8 @@
 				<span class="highlight"></span><span class="bar"></span> <label>내용</label>
 			</div>
 			<div class="btn-box">
-				<button type="button" class="btn btn-submit" id="btn_ok">입력
-					완료</button>
-				<button type="button" class="btn btn-submit" id="btcancel">취소</button>
+				<button type="submit" class="btn btn-submit">저장</button>
+				<button type="button" class="btn btn-submit">취소</button>
 			</div>
 		</form>
 	</div>
