@@ -5,6 +5,7 @@
 <%@ page import="blogdt.vo.MemberVO" %>
 <%-- DAO import --%>   
 <%@ page import="blogdt.dao.MemberDAO" %>
+
 <html>
 
 <head>
@@ -23,6 +24,7 @@
 	<jsp:setProperty name="memberVo" property="*"/>
 	</jsp:useBean>
 	<%
+		
 		MemberDAO dao = MemberDAO.getInstance();
 
 		 dao.insertMember(memberVo);

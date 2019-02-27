@@ -14,7 +14,11 @@
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic+Coding:400,700|Nanum+Gothic:400,700,800|Nanum+Pen+Script&amp;subset=korean" rel="stylesheet">
 <style type="text/css">
+<<<<<<< HEAD
 /*
+=======
+
+>>>>>>> 6199918f09008c5baa4a3a3b326914a022efab23
   *,
 :before,
 :after {
@@ -26,9 +30,15 @@
 h1 {
 	font-family: 'Nanum Gothic', sans-serif;
 }
+<<<<<<< HEAD
 /* body {
   background: #EEEEEE;
 }
+=======
+ body {
+  background: #FFFFFF;
+} 
+>>>>>>> 6199918f09008c5baa4a3a3b326914a022efab23
 
 form {
   width: 320px;
@@ -132,4 +142,152 @@ label {
   transition: 300ms ease all;
   left: 0%;
 }
+<<<<<<< HEAD
 </style>
+=======
+
+.btn {
+  background: #ef000f;
+  color: #959595;
+  border: none;
+  padding: 10px 20px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  text-decoration: none;
+  outline: none;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+.btn:hover {
+  color: #8b8b8b;
+  box-shadow: 0 7px 14px rgba(0, 0, 0, 0.18), 0 5px 5px rgba(0, 0, 0, 0.12);
+}
+.btn.btn-link {
+  background: #ef000f;
+  color: #d3eafd;
+}
+.btn.btn-link:hover {
+  background: #0d8aee;
+  color: #deeffd;
+}
+.btn.btn-submit {
+  background: #ef000f;
+  color: #deeffd;
+}
+.btn.btn-submit:hover {
+  background: #0d8aee;
+  color: #deeffd;
+}
+.btn.btn-cancel {
+  background: #eee;
+}
+.btn.btn-cancel:hover {
+  background: #e1e1e1;
+  color: #8b8b8b;
+}
+
+.btn-box {
+  text-align: center;
+  margin: 50px 0;
+}
+.btn-box2 {
+  text-align: center;
+  margin: 3px 0;
+}
+.btn-p{
+	padding: 5px;
+}
+
+a:hover{
+	text-decoration:none;
+}
+.sizeRadio{
+ float:left;
+ width: 16px;
+}
+
+
+.button-3 {
+	width: 100px;
+	height: 30px;
+	border: 2px solid #34495e;
+	float: left;
+	text-align: center;
+	cursor: pointer;
+	position: relative;
+	box-sizing: border-box;
+	overflow: hidden;
+	margin: 0 0 5px 5px;
+}
+
+.button-3 a {
+	font-family: 'Nanum Gothic', sans-serif;
+	font-size: 16px;
+	color: #34495e;
+	text-decoration: none;
+	line-height: 30px;
+	transition: all .5s ease;
+	z-index: 0;
+	position: relative;
+}
+
+.eff-3 {
+	width: 150px;
+	height: 50px;
+	bottom: -50px;
+	background: #34495e;
+	position: absolute;
+	transition: all .5s ease;
+	z-index: -1;
+}
+
+.button-3:hover .eff-3 {
+	bottom: 0;
+}
+
+.button-3:hover a {
+	color: #fff;
+}
+
+
+/*로그인, 회원가입 버튼*/
+
+.button-2{
+  width: 100px;
+  height: 30px;
+  border:2px solid #ff6f61;
+  float:left;
+  text-align:center;
+  cursor:pointer;
+  position:relative;
+  box-sizing:border-box;
+  overflow:hidden;
+  margin:0 0 40px 50px;
+}
+.button-2 a{
+  font-family:'Nanum Gothic', sans-serif;
+  font-size:16px;
+  color:#ff6f61;
+  text-decoration:none;
+  line-height:30px;
+  transition:all .5s ease;
+  z-index:0;
+  position:relative;
+}
+.eff-2{
+  width:140px;
+  height:50px;
+  top:-50px;
+  background:#ff6f61;
+  position:absolute;
+  transition:all .5s ease;
+  z-index:-1;
+}
+.button-2:hover .eff-2{
+  top:0;
+}
+.button-2:hover a{
+  color:#fff;
+}
+</style>
+>>>>>>> 6199918f09008c5baa4a3a3b326914a022efab23
