@@ -6,7 +6,7 @@ drop table member;
 
 create table member(
 	id		varchar(30)	not null	primary key,
-	pw		varchar(16) not null,
+	pw		varchar(255) not null,
 	name	varchar(10) not null,
 	birth	datetime	not null,
 	major	varchar(30) not null,
@@ -87,3 +87,4 @@ select name,dept,btype,img from member as m,board as b where m.id=b.id;
 
 select name,dept,btype,img from member as m,board as b where m.id=b.id
 
+alter table member modify pw varchar(300);

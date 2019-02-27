@@ -1,4 +1,7 @@
 package blogdt.vo;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
+import jsp.util.Sec;
 
 public class MemberVO {
 	private String id;
@@ -47,8 +50,8 @@ public class MemberVO {
 	}
 
 
-	public void setPw(String pw) {
-		this.pw = pw;
+	public void setPw(String pw) { 
+		this.pw = Sec.getSha256(pw);
 	}
 
 

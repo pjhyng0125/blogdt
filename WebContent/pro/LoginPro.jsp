@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
     pageEncoding="utf-8"%>
 <%@ page import="blogdt.dao.MemberDAO" %>
+<%@ page import="jsp.util.Sec"%>
 <html>
 <head>
 </head>
@@ -11,7 +12,8 @@
 		
 		// 로그인 화면에 입력된 아이디와 비밀번호를 가져온다
 		String id= request.getParameter("id");
-		String pw = request.getParameter("pw");
+		Sec s = new Sec(request);
+		String pw = s.getParameter("pw");
 		
 		// DB에서 아이디, 비밀번호 확인
 		MemberDAO dao = MemberDAO.getInstance();
