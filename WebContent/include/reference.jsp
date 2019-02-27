@@ -14,11 +14,7 @@
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic+Coding:400,700|Nanum+Gothic:400,700,800|Nanum+Pen+Script&amp;subset=korean" rel="stylesheet">
 <style type="text/css">
-<<<<<<< HEAD
-/*
-=======
 
->>>>>>> 6199918f09008c5baa4a3a3b326914a022efab23
   *,
 :before,
 :after {
@@ -30,15 +26,9 @@
 h1 {
 	font-family: 'Nanum Gothic', sans-serif;
 }
-<<<<<<< HEAD
-/* body {
-  background: #EEEEEE;
-}
-=======
  body {
   background: #FFFFFF;
-} 
->>>>>>> 6199918f09008c5baa4a3a3b326914a022efab23
+}
 
 form {
   width: 320px;
@@ -142,9 +132,6 @@ label {
   transition: 300ms ease all;
   left: 0%;
 }
-<<<<<<< HEAD
-</style>
-=======
 
 .btn {
   background: #ef000f;
@@ -290,4 +277,3 @@ a:hover{
   color:#fff;
 }
 </style>
->>>>>>> 6199918f09008c5baa4a3a3b326914a022efab23
