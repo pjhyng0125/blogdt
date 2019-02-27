@@ -113,8 +113,16 @@
 <form>
 	<h1>Career Info 통계</h1>
 	<div class="btn-box">
-		<button type="button" class="btn btn-submit" id="btmajor">전공</button>
-		<button type="button" class="btn btn-submit" id="btage">나이</button>
+		<div class="button-3">
+			<div class="eff-3"></div>
+			<a id="btmajor">전공</a>
+		</div>
+		<div class="button-3"  style="margin-left:5px;">
+			<div class="eff-3"></div>
+			<a id="btage">나이</a>
+		</div>
+		<!--  <button type="button" class="btn btn-submit" >전공</button>  
+		<button type="button" class="btn btn-submit" id="btage">나이</button> -->
 	</div>
 	<div id="test" style="width:100%; height:400px;"></div>
 	<div class="btn-box">

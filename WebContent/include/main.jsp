@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<%@ include file="../view/loginView.jsp"%>
+<%@ include file="../view/LoginView.jsp"%>
 
 <!DOCTYPE html>
 <meta charset="utf-8">
@@ -83,7 +83,6 @@ ul {
 		<img src="../img/png/logo3.png" width="350">
 	</div>
 
-<<<<<<< HEAD
 	<div class="top_menu" style="margin-top:-20px;">
 		<ul>
 			<li><div class="button-3">
@@ -101,8 +100,7 @@ ul {
 		</ul>
 	</div>
 </div>
-=======
-  <%
+<%--   <%
   	String sessionID= (String)session.getAttribute("login_id");
   %>
   <div class="container">
@@ -134,4 +132,4 @@ ul {
       </ul>
     </div>
   </div>
->>>>>>> d64fcd7a7fae6ad51d905397351bef1ba88324b1
+>>>>>>> d64fcd7a7fae6ad51d905397351bef1ba88324b1 --%>

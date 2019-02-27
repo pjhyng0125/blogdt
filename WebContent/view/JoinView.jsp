@@ -155,7 +155,7 @@
 
 				<div class="group">
 					<select name="dept" required="required" id="dept">
-						<option value="s"></option>
+						<option value=""></option>
 						<option value="항공관리">항공관리</option>
 						<option value="항공영업">항공영업</option>
 						<option value="데이터센터">데이터센터</option>
