@@ -100,7 +100,7 @@
 
 			<div class="group">
 				<input type="password" name="pw" onkeyup="" required="required" id="pw"><span
-					class="highlight"></span><span class="bar"></span><label>아이디</label>
+					class="highlight"></span><span class="bar"></span><label>비밀번호</label>
 			</div>
 
 			<div class="group">

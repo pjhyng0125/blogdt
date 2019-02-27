@@ -71,9 +71,9 @@
 		        allowPointSelect: true,
 		        keys: ['name', 'y', 'selected', 'sliced'],
 		        data: [
-		            ['소프트웨어학', <%=list.get(0) %>, false],
+		            ['소프트웨어공학', <%=list.get(0) %>, false],
 		            ['컴퓨터공학', <%=list.get(1) %>, false],
-		            ['정보통신학', <%=list.get(2) %>, false],
+		            ['정보통신공학', <%=list.get(2) %>, false],
 		            ['경영학', <%=list.get(3) %>, false]
 		        ],
 		        showInLegend: true

@@ -34,9 +34,9 @@ private static SatisDAO instance=new SatisDAO();
 		
 		List<Integer> list=null;
 		conn=getConnection();
-		String sql="select count(if(major='소프트웨어학',major,null)) as soft, " + 
+		String sql="select count(if(major='소프트웨어공학',major,null)) as soft, " + 
 				"count(if(major='컴퓨터공학',major,null)) as engine, " + 
-				"count(if(major='정보통신학',major,null)) as infor, " + 
+				"count(if(major='정보통신공학',major,null)) as infor, " + 
 				"count(if(major='경영학',major,null)) as busin " + 
 				"from member";
 		pstmt=conn.prepareStatement(sql);

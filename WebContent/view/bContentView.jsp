@@ -80,10 +80,7 @@
   <%
   	String login_id=(String)session.getAttribute("login_id");
   	System.out.println("login_id: "+login_id);
-  	System.out.println("dto.getId(): "+dto.getId());
   if(login_id.equals(dto.getId())){
-  	System.out.println("dto.getId(): "+dto.getId());
-  if(login_id.equals( dto.getId() )){
   %>
 	<a type="button" id="btupdate" class="w3-btn w3-red">게시물 수정</a>
 	<%

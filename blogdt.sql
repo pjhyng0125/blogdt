@@ -60,12 +60,12 @@ delete from board where num="7";
 delete from board where num="8";
 
 update board set img="parkjh.jpg" where img="parkjh.JPG";
-
+update board set btype="선배님들 조언" where btype="선배님 조언";
 update board set img="lion.JPG" where img="lion.jpg";
 update board set img="apeach.JPG" where img="apeach.jpg";
 update board set img="tube.JPG" where img="tube.jpg";
 update board set img="muji.JPG" where img="muji.jpg";
-
+update board set content="정말 환영합니다!" where id="test00";
 
 <!--option2-->
 create table dept(
