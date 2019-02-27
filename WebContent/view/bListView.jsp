@@ -11,9 +11,9 @@
 <%@include file="../include/reference.jsp"%>
 <%@include file="../include/main.jsp"%>
 <title>bListView.jsp</title>
-<!-- 
+<!--
 	파일명: bListView.jsp (board List view)
-	마지막 수정 날짜: 19/02/23  
+	마지막 수정 날짜: 19/02/23
 	작성자: 박진형
 	기능: 게시물 목록을 보여주는 화면 (Card 활용)
 -->
@@ -26,10 +26,10 @@
 <%
 	String selector="전체보기";
 	selector=request.getParameter("selector");//select 선택 접속 시
-	
+
 	if(selector==null)//bListView.jsp 바로 접속 시
 		selector="전체보기";
-		
+
 	List<BListDTO> list=null;
 	BListDAO dao=BListDAO.getInstance();
 %>
@@ -37,17 +37,17 @@
 	$(function(){
 		$("#selector").change(function(){
 			if($("#selector").val()==1){
-				location.href="../view/bListView.jsp?selector="+encodeURI('전체보기','UTF-8');
+				location.href="bListView.jsp?selector="+encodeURI('전체보기','UTF-8');
 			} else if($("#selector").val()==2){
-				location.href="../view/bListView.jsp?selector="+encodeURI('신입사원 소개','UTF-8');				
+				location.href="bListView.jsp?selector="+encodeURI('신입사원 소개','UTF-8');
 			} else if($("#selector").val()==3){
-				location.href="../view/bListView.jsp?selector="+encodeURI('선배님들 조언','UTF-8');							
+				location.href="bListView.jsp?selector="+encodeURI('선배님들 조언','UTF-8');
 			} else if($("#selector").val()==4){
-				location.href="../view/bListView.jsp?selector="+encodeURI('아시아나IDT 기술소개','UTF-8');											
+				location.href="bListView.jsp?selector="+encodeURI('아시아나IDT 기술소개','UTF-8');
 			} else if($("#selector").val()==5){
-				location.href="../view/bListView.jsp?selector="+encodeURI('연수원','UTF-8');;																
+				location.href="bListView.jsp?selector="+encodeURI('연수원','UTF-8');;
 			} else if($("#selector").val()==6){
-				location.href="../view/bListView.jsp?selector="+encodeURI('봉사활동','UTF-8');;																				
+				location.href="bListView.jsp?selector="+encodeURI('봉사활동','UTF-8');;
 			} else{
 				alert("<select>: 불가능한 값이 선택되었습니다.");
 			}
@@ -67,7 +67,7 @@
 <div class="container">
 <form>
 	<div class="group">
-			<select name="select" id="selector" required="required">				
+			<select name="select" id="selector" required="required">
 				<option value="0">==선택==</option>
 				<option value="1">전체보기</option>
 				<option value="2">신입사원 소개</option>
@@ -94,7 +94,7 @@
         	<div class="body text-center">
             	<p class="card-title">[<%=list.get(i).getBtype() %>]</p>
         		<p class="card-text"><%=list.get(i).getDept() %> <%=list.get(i).getName() %></p>
-                <a href="../view/bContentView.jsp?num=<%=list.get(i).getNum() %>" class="w3-btn w3-red">See More <%=list.get(i).getNum() %></a>
+                <a href="bContentView.jsp?num=<%=list.get(i).getNum() %>" class="w3-btn w3-red">See More <%=list.get(i).getNum() %></a>
             	<p></p>
             </div>
         </div>

@@ -28,7 +28,7 @@ h1 {
 }
  body {
   background: #FFFFFF;
-} 
+}
 
 form {
   width: 320px;
@@ -43,7 +43,7 @@ form h1 {
 form h5 {
   text-align: center;
   text-transform: uppercase;
-  color: #424242;   
+  color: #424242;
 }
 form hr.sep {
   background: #ef000f;
@@ -56,7 +56,7 @@ form hr.sep {
 form .emoji {
   font-size: 1.2em;
 }
-
+*/
 .group {
   position: relative;
   margin: 20px 0;

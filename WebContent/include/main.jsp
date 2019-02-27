@@ -107,15 +107,14 @@ ul {
 <%--   <%
   	String sessionID= (String)session.getAttribute("login_id");
   %>
-  <div class="container">
-  	<div class="log">
-  	
-  	<% 
+	<div class="container">
+	<div class="log">
+
+		<%
   		if(sessionID == null){ //세션이 없을때
-  	%>	
-  			<a onclick="document.getElementById('id01').style.display='block'" width='50'>로그인</a>
-  			<a href="../view/JoinView.jsp">회원가입</a>
-  	<%
+  	%>
+		<a onclick="document.getElementById('id01').style.display='block'" width='50'>로그인</a><a href="../view/JoinView.jsp">회원가입</a>
+		<%
   		}
   		else{
   			out.println("<div class='welcome'><p style='display : inline'>");
@@ -123,17 +122,21 @@ ul {
     		out.println("<a href='../pro/LogoutPro.jsp' style='display : inline'>로그아웃</a></div>");
   		}
   	%>
-  	</div>
-    
-    <div class="logo">
-      <img src="../img/png/logo3.png" width = "350">
-    </div>
-    <div class="top_menu">
-      <ul>
-      <li><a href="bInsertView.jsp"><img src="../img/png/writing2.png" width="60"></a></li>
-      <li><a href="bHistoryView.jsp"><img src="../img/png/history2.png" width="60"></a></li>
-      <li><a href="dShowView.jsp"><img src="../img/png/statistics2.png" width="60"></a></li>
-      </ul>
-    </div>
-  </div>
->>>>>>> d64fcd7a7fae6ad51d905397351bef1ba88324b1 --%>
+	</div>
+
+	<div class="logo">
+		<img src="../img/png/logo3.png" width="350">
+	</div>
+	<div class="top_menu">
+		<ul>
+			<li><a href="bInsertView.jsp"
+				class="button_base b01_simple_rollover">글쓰기</a></li>
+			<li><a href="bHistoryView.jsp"
+				class="button_base b01_simple_rollover">내 게시물</a></li>
+			<li><a href="dShowView.jsp"
+				class="button_base b01_simple_rollover">통계</a></li>
+		</ul>
+	</div>
+</div>
+</body>
+</html>

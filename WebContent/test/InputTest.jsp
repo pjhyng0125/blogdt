@@ -12,6 +12,6 @@
 		이름 : <input type="text" name="name" maxlength="10"><br> 
 		
 	</form>
-	<button type="submit" value="입력완료" form>버튼</button>
+	<button type="submit" value="입력완료">버튼</button>
 </body>
 </html>
