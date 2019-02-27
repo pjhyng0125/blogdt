@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ include file= "../view/loginView.jsp"%>
+<%@ include file= "../view/LoginView.jsp"%>
   
 <!DOCTYPE html>
     <meta charset="utf-8">
@@ -46,7 +46,7 @@
     </style>
 
   <%
-  	String sessionID= (String)session.getAttribute("session_ID");
+  	String sessionID= (String)session.getAttribute("login_id");
   %>
   <div class="container">
   	<div class="log">
