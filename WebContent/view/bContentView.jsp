@@ -77,7 +77,14 @@
   </div>
   
   <div class="btn-box">
+  <%
+  	String login_id=(String)session.getAttribute("login_id");
+  if(login_id == dto.getId()){
+  %>
 	<a type="button" id="btupdate" class="w3-btn w3-red">게시물 수정</a>
+	<%
+  }
+	%>
 	<a type="button" id="btmain"  class="w3-btn w3-border">목록으로</a>
   </div>
 </div>  

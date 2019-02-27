@@ -15,7 +15,7 @@
 		String returnPage = "../view/bListView.jsp";
 
 		String realFolder = ""; //웹 어플리케이션상 절대 경로
-		String saveFolder = "../upload"; //파일 업로드 폴더
+		String saveFolder = "./upload"; //파일 업로드 폴더
 		int maxSize = 5 * 1024 * 1024; //업로드될 최대 파일크기 : 5mb
 		String encType = "utf-8"; //인코딩 타입
 
@@ -35,6 +35,10 @@
 		}
 		try {
 			realFolder = context.getRealPath(saveFolder);
+			System.out.println("=========================================");
+			System.out.println(saveFolder);
+			System.out.println(realFolder);
+			System.out.println("=========================================");
 			multi = new MultipartRequest(request, realFolder, maxSize, encType, new DefaultFileRenamePolicy());
 			int num = Integer.parseInt(multi.getParameter("num"));
 			String tit = multi.getParameter("title");
