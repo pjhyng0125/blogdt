@@ -13,7 +13,6 @@ div.org {
   transform: translate(-50%, -50%);
   margin-top: 50px;
 
-
 }
 
 </style>
@@ -24,7 +23,7 @@ div.org {
 </head>
 <body>
 	<div class="org">
-		<img src="../img/block.png" width="800" align="center">
+		<img src="../img/block.png" width="900" align="center">
 	</div>
 </body>
 </html>

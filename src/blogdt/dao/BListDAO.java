@@ -12,6 +12,7 @@ import javax.sql.DataSource;
 
 import blogdt.dto.BContentDTO;
 import blogdt.dto.BListDTO;
+import blogdt.dto.BMyDTO;
 
 /* 
 파일명: BListDAO.java (Board List Data Access Object)
@@ -64,6 +65,42 @@ public class BListDAO {
 		return list;
 	}
 	
+	//박진형: 게시물 목록 화면 데이터 부분 select
+		public List<BListDTO> getSelectList(String btype) throws Exception{
+			Connection conn=null;
+			PreparedStatement pstmt=null;
+			ResultSet rs=null;
+			
+			List<BListDTO> list=null;	//select 결과가 저장되어 반환될 List
+			String sql=null;
+			conn=getConnection();
+			if(btype.equals("전체보기")) {
+				sql="select name,num,dept,btype,img from member as m, board as b where m.id=b.id";
+				pstmt=conn.prepareStatement(sql);
+			}else {
+				sql="select name,num,dept,btype,img from member as m, board as b where m.id=b.id and btype=?";
+				pstmt=conn.prepareStatement(sql);
+				System.out.println(btype);
+				pstmt.setNString(1, btype);
+			}
+			rs=pstmt.executeQuery();
+			
+			if(rs.next()) {//만약 결과값이 있다면
+				list=new ArrayList<BListDTO>();
+				do {
+					BListDTO dto=new BListDTO();
+					dto.setName(rs.getString("name"));
+					dto.setDept(rs.getString("dept"));
+					dto.setNum(rs.getInt("num"));
+					dto.setBtype(rs.getString("btype"));
+					dto.setImg(rs.getString("img"));
+					list.add(dto);
+				}while(rs.next());
+			}
+			//결과값 없으면 board 테이블이 비어있는 상태이기 때문에 null 반환할 것!=> 예외 처리 해줘야 함.
+			return list;
+		}
+	
 	//박진형: 게시물 상세 화면 데이터 전체 select
 		public BContentDTO getBoardContent(int num) throws Exception{
 			Connection conn=null;
@@ -91,6 +128,38 @@ public class BListDAO {
 			}
 			//결과값 없으면 board 테이블이 비어있는 상태이기 때문에 null 반환할 것!=> 예외 처리 해줘야 함.
 			return dto;
+		}
+		
+		//박진형: 게시물 목록 화면 데이터 부분 select
+		public List<BMyDTO> getMyList(String id) throws Exception{
+			Connection conn=null;
+			PreparedStatement pstmt=null;
+			ResultSet rs=null;
+			
+			List<BMyDTO> list=null;	//select 결과가 저장되어 반환될 List
+			String sql=null;
+				conn=getConnection();
+			
+				sql="select num,id,title,btype from board where id=?";
+				pstmt=conn.prepareStatement(sql);
+				System.out.println(id);
+				pstmt.setNString(1, id);
+				rs=pstmt.executeQuery();
+					
+			if(rs.next()) {//만약 결과값이 있다면
+				list=new ArrayList<BMyDTO>();
+				do {
+					BMyDTO dto=new BMyDTO(
+						rs.getInt("num"),
+						rs.getString("id"),
+						rs.getString("title"),
+						rs.getString("btype")
+							);
+					list.add(dto);
+				}while(rs.next());
+			}
+			//결과값 없으면 board 테이블이 비어있는 상태이기 때문에 null 반환할 것!=> 예외 처리 해줘야 함.
+			return list;
 		}
 	
 }
