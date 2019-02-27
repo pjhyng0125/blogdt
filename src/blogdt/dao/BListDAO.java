@@ -110,7 +110,7 @@ public class BListDAO {
 			BContentDTO dto=null;	//select 결과가 저장되어 반환될 BContentDTO
 			
 			conn=getConnection();
-			String sql="select jyear,btype,title,dept,name,position,img,content,id from member as m,board as b where num=? and m.id=b.id";
+			String sql="select jyear,btype,title,dept,name,position,img,content,m.id from member as m,board as b where num=? and m.id=b.id";
 			pstmt=conn.prepareStatement(sql);
 			pstmt.setInt(1, num);
 			rs=pstmt.executeQuery();
@@ -125,7 +125,7 @@ public class BListDAO {
 					dto.setPosition(rs.getString("position"));
 					dto.setImg(rs.getString("img"));
 					dto.setContent(rs.getString("content"));
-					dto.setContent(rs.getString("id"));
+					dto.setId(rs.getString("id"));
 			}
 			//결과값 없으면 board 테이블이 비어있는 상태이기 때문에 null 반환할 것!=> 예외 처리 해줘야 함.
 			return dto;

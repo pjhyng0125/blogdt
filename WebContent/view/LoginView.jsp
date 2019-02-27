@@ -1,5 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+ 
+<%@include file="../include/reference.jsp"%>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -162,7 +165,7 @@ window.onclick = function(event) {
   <form class="modal-content animate" action="../pro/LoginPro.jsp" method="post">
     <div class="imgcontainer">
       <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-      <img src="../img/png/logo2.png" alt="Avatar" class="avatar">
+      <img src="../img/png/logo3.png" alt="Avatar" class="avatar">
     </div>
 
     <div class="container">
@@ -177,7 +180,6 @@ window.onclick = function(event) {
 
     <div class="container" style="background-color:#f1f1f1">
       <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">취소</button>
-      <span class="psw"><a href="#">아이디 찾기</a>&nbsp&nbsp <a href="#">비밀번호 찾기</a></span>
     </div>
   </form>
 </div>

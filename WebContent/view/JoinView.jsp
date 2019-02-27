@@ -91,37 +91,37 @@
 		<h1>회원 가입</h1>
 			<br>
 			<div class="group" >
-				<input type="text" name="id" required="required" id="id" onkeydown="idChk()"> <span
-					class="highlight"></span> <span class="bar"></span> <label >아이디</label>
+				<input type="text" name="id" required="required" id="id" onkeydown="idChk()" placeholder="아이디를 입력하세요"> <span
+					class="highlight"></span> <span class="bar"></span>
 			</div>
 			<div class="idcheck">
 			
 			</div>
 
 			<div class="group">
-				<input type="password" name="pw" onkeyup="" required="required" id="pw"><span
-					class="highlight"></span><span class="bar"></span> <label>비밀번호</label>
+				<input type="password" name="pw" onkeyup="" required="required" id="pw" placeholder="비밀번호를 입력하세요"><span
+					class="highlight"></span><span class="bar"></span>
 			</div>
 
 			<div class="group">
-				<input type="password" onkeyup="" required="required" id="pwconfirm"><span class="highlight"></span><span
-					class="bar"></span> <label>비밀번호 확인</label>
+				<input type="password" onkeyup="" required="required" id="pwconfirm" placeholder="비밀번호 한번 더 입력하세요"><span class="highlight"></span><span
+					class="bar"></span>
 			</div>
 
 			<div class="group">
-				<input type="text" name="name" id="name" required="required"><span
-					class="highlight"></span><span class="bar"></span> <label>이름</label>
+				<input type="text" name="name" id="name" required="required" placeholder="이름을 입력하세요"><span
+					class="highlight"></span><span class="bar"></span>
 			</div>
 
 			<div class="group">
-				<input type="date" id="birth" name="birth"><span class="highlight"></span><span
-					class="bar"></span> <label>생년월일</label>
+				<input type="date" id="birth" name="birth" placeholder="생일을 입력하세요"><span class="highlight"></span><span
+					class="bar"></span>
 			</div>
 			<br>
 
 			<div class="group">
 				<select name="major" name="major" id="major" required="required">
-					<option value=" "></option>
+					<option value="==전공을 선택하세요==" selected disabled></option>
 					<option value="컴퓨터공학">컴퓨터공학</option>
 					<option value="정보통신공학">정보통신공학</option>
 					<option value="소프트웨어공학">소프트웨어공학</option>
@@ -129,33 +129,33 @@
 					<option value="경제학">경제학</option>
 					<option value="교육학">교육학</option>
 					<option value="기타">기타</option>
-				</select> <label>전공</label>
+				</select>
 			</div>
 			<br>
 
 			<div class="group">
 				<select name="position" name="position" required="required"
 					id="position" onchange="pos_change()">
-					<option value=" "></option>
+					<option value="==직급을 선택하세요==" selected disabled></option>
 					<option value="일반">일반</option>
 					<option value="사원">사원</option>
 					<option value="대리">대리</option>
 					<option value="과장">과장</option>
 					<option value="임원">임원</option>
 					<option value="사장">사장</option>
-				</select> <label>직급</label>
+				</select>
 			</div>
 
 
 			<div id="team">
 				<div class="group">
-					<input type="text" name="jyear" id="jyear"><span class="highlight"></span><span
-						class="bar"></span> <label>입사년도</label>
+					<input type="text" name="jyear" id="jyear" placeholder="입사년도을 입력하세요"><span class="highlight"></span><span
+						class="bar"></span>
 				</div>
 
 				<div class="group">
-					<select name="dept" required="required" id="dept">
-						<option value=" "></option>
+					<select name="dept" required id="dept">
+						<option value="==부서를 선택하세요==" selected disabled></option>
 						<option value="항공관리">항공관리</option>
 						<option value="항공영업">항공영업</option>
 						<option value="데이터센터">데이터센터</option>
@@ -164,7 +164,7 @@
 						<option value="금융">금융</option>
 						<option value="보험">보험</option>
 						<option value="건설">건설</option>
-					</select> <label>부서</label>
+					</select>
 				</div>
 			</div>
 			<br>

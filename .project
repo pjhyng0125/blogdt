@@ -28,4 +28,11 @@
 		<nature>org.eclipse.jdt.core.javanature</nature>
 		<nature>org.eclipse.wst.jsdt.core.jsNature</nature>
 	</natures>
+	<linkedResources>
+		<link>
+			<name>WebContent/JoinView2.jsp</name>
+			<type>1</type>
+			<locationURI>PARENT-2-PROJECT_LOC/%EB%B0%9B%EC%9D%80%20%ED%8C%8C%EC%9D%BC/JoinView2.jsp</locationURI>
+		</link>
+	</linkedResources>
 </projectDescription>

@@ -24,6 +24,8 @@ insert into member values ("lion","1234","라이언","1992/01/01","컴퓨터소�
 insert into member values ("apeach","1234","어피치","1992/01/01","컴퓨터소프트웨어학","사원","2019","항공영업",'1');
 insert into member values ("tube","1234","튜 브","1992/01/01","컴퓨터소프트웨어학","사원","2019","데이터센터",'1');
 
+select jyear,btype,title,dept,name,position,img,content,m.id from member as m,board as b where num=1 and m.id=b.id;
+
 desc member;
 alter table member add jyear varchar(4) default "1900";
 select * from member;

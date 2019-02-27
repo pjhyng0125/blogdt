@@ -64,7 +64,12 @@
 		} catch (Exception e) {
 			returnPage = "500code.jsp";
 		} finally {
-			response.sendRedirect("../view/bListView.jsp");
+			/* response.sendRedirect("../view/bListView.jsp"); */
+			%>
+			<script>
+				location.href="../view/bListView.jsp";
+			</script>
+			<%
 			/* request.getRequestDispatcher(returnPage).forward(request, response); // 로그인 페이지로 리다이렉트 한다. */
 		}
 	%>
