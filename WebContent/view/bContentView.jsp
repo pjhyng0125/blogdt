@@ -53,17 +53,25 @@
   <p></p>
   <div class="container">     
     <div class="row">
-      <div class="col-sm-6 bg-success">
+      <div class="col-sm-5">
       	<div class="card zoom">
-        	<div class="body text-left">
+        	<div class="card-header text-center">
             	<p class="card-title"><%=personinfo %></p>
-                </div>
-        <img class="card-img-top" src="<%=dto.getImg() %>" style="width:50%" height="30%">
+            </div>
+            <div class="card-header card-body img-center">
+        		<img class="mx-auto d-block" src="../upload/<%=dto.getImg() %>" style="width:100%" height="50%">
+            </div>
         </div>  
       </div>
-      <div class="col-sm-6 bg-warning">
-          ※ Board의 Content를 뿌려줄 영역입니당 
-        <%=dto.getContent() %>  
+      <div class="col-sm-7">
+      	<div class="card zoom">
+        	<div class="body text-left">
+      			<div class="col-sm-6">
+          			※ Board의 Content를 뿌려줄 영역입니당 
+      			 	<%=dto.getContent() %>  
+     			 </div>        		
+            </div>
+        </div>  
       </div>
     </div>
   </div>
