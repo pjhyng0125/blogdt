@@ -15,12 +15,15 @@ public class BContentDTO {
 	private String img;
 	private String content;
 
+	// for id check
+	private String id;
+
 	public BContentDTO() {
 		super();
 	}
 
 	public BContentDTO(String jyear, String btype, String title, String dept, String name, String position, String img,
-			String content) {
+			String content, String id) {
 		super();
 		this.jyear = jyear;
 		this.btype = btype;
@@ -30,6 +33,7 @@ public class BContentDTO {
 		this.position = position;
 		this.img = img;
 		this.content = content;
+		this.id = id;
 	}
 
 	public String getJyear() {
@@ -96,12 +100,18 @@ public class BContentDTO {
 		this.content = content;
 	}
 
+	public String getId() {
+		return id;
+	}
+
+	public void setId(String id) {
+		this.id = id;
+	}
+
 	@Override
 	public String toString() {
 		return "BContentDTO [jyear=" + jyear + ", btype=" + btype + ", title=" + title + ", dept=" + dept + ", name="
-				+ name + ", position=" + position + ", img=" + img + ", content=" + content + "]";
+				+ name + ", position=" + position + ", img=" + img + ", content=" + content + ", id=" + id + "]";
 	}
-	
-	
 
 }

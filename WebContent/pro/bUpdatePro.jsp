@@ -8,7 +8,6 @@
 
 <html>
 <head>
-<title>blogdt</title>
 </head>
 <body>
 	<%
@@ -27,14 +26,19 @@
 			id = (String) session.getAttribute("login_id");
 			// id = "testID";
 			if (id == null || id.equals("")) { // id가 Null 이거나 없을 경우
-				returnPage = "/blogdt/view/loginView.jsp"; // 로그인 페이지로 리다이렉트 한다.
-				request.getRequestDispatcher(returnPage).forward(request, response); // 로그인 페이지로 리다이렉트 한다.
+				returnPage = "/blogdt/view/bListView.jsp"; // 로그인 페이지로 리다이렉트 한다.
+				response.sendRedirect("../view/bListView.jsp");
+/* 				request.getRequestDispatcher(returnPage).forward(request, response); // 로그인 페이지로 리다이렉트 한다. */
 			}
 		} catch (Exception e) {
 			out.println(e.getMessage());
 		}
 		try {
 			realFolder = context.getRealPath(saveFolder);
+			System.out.println("=========================================");
+			System.out.println(saveFolder);
+			System.out.println(realFolder);
+			System.out.println("=========================================");
 			multi = new MultipartRequest(request, realFolder, maxSize, encType, new DefaultFileRenamePolicy());
 			int num = Integer.parseInt(multi.getParameter("num"));
 			String tit = multi.getParameter("title");
@@ -72,9 +76,11 @@
 			dao.updateBoard(new BoardVO(num, id, tit, cat, img, con));
 
 		} catch (Exception e) {
-			returnPage = "500code.jsp";
+			/* returnPage = "../error/500code.jsp"; */
+			e.printStackTrace();
 		} finally {
-			request.getRequestDispatcher(returnPage).forward(request, response); // 로그인 페이지로 리다이렉트 한다.
+			response.sendRedirect("../view/bListView.jsp");
+			/* request.getRequestDispatcher(returnPage).forward(request, response); // 로그인 페이지로 리다이렉트 한다. */
 		}
 	%>
 </body>

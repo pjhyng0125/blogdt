@@ -62,7 +62,7 @@
 			return false;
 		}
 
-		if (join.position.value == "") {
+		if (join.position.value == " ") {
 			alert("직급을 입력해주세요");
 			join.self.focus();
 			return false;
@@ -121,7 +121,7 @@
 
 			<div class="group">
 				<select name="major" name="major" id="major" required="required">
-					<option value=""></option>
+					<option value=" "></option>
 					<option value="컴퓨터공학">컴퓨터공학</option>
 					<option value="정보통신공학">정보통신공학</option>
 					<option value="소프트웨어공학">소프트웨어공학</option>
@@ -136,7 +136,7 @@
 			<div class="group">
 				<select name="position" name="position" required="required"
 					id="position" onchange="pos_change()">
-					<option value=""></option>
+					<option value=" "></option>
 					<option value="일반">일반</option>
 					<option value="사원">사원</option>
 					<option value="대리">대리</option>
@@ -155,7 +155,7 @@
 
 				<div class="group">
 					<select name="dept" required="required" id="dept">
-						<option value=""></option>
+						<option value=" "></option>
 						<option value="항공관리">항공관리</option>
 						<option value="항공영업">항공영업</option>
 						<option value="데이터센터">데이터센터</option>

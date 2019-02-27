@@ -40,7 +40,7 @@
 				<select id="category" name="btname" required>
 					<option value="0" selected disabled>선택</option>
 					<option value="1">신입사원 소개</option>
-					<option value="2">선배님 조언</option>
+					<option value="2">선배님들 조언</option>
 					<option value="3">아시아나IDT 기술 소개</option>
 					<option value="4">연수원</option>
 				</select> <label>관심사</label>
