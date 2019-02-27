@@ -9,6 +9,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@include file="../include/reference.jsp"%>
+<%@include file="../include/main.jsp"%>
 <title>bListView.jsp</title>
 <!-- 
 	파일명: bListView.jsp (board List view)
@@ -56,8 +57,6 @@
 <%
 	list=dao.getSelectList(selector);
 %>
-</head>
-<%@include file="../include/main.jsp"%>
 <article>
 <div class="container">
 <form>
