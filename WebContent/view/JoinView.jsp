@@ -91,31 +91,31 @@
 		<h1>회원 가입</h1>
 			<br>
 			<div class="group" >
-				<input type="text" name="id" required="required" id="id" onkeydown="idChk()" placeholder="아이디를 입력하세요"> <span
-					class="highlight"></span> <span class="bar"></span>
+				<input type="text" name="id" required="required" id="id" onkeydown="idChk()"> <span
+					class="highlight"></span> <span class="bar"></span> <label>아이디</label>
 			</div>
 			<div class="idcheck">
 			
 			</div>
 
 			<div class="group">
-				<input type="password" name="pw" onkeyup="" required="required" id="pw" placeholder="비밀번호를 입력하세요"><span
-					class="highlight"></span><span class="bar"></span>
+				<input type="password" name="pw" onkeyup="" required="required" id="pw"><span
+					class="highlight"></span><span class="bar"></span><label>아이디</label>
 			</div>
 
 			<div class="group">
-				<input type="password" onkeyup="" required="required" id="pwconfirm" placeholder="비밀번호 한번 더 입력하세요"><span class="highlight"></span><span
-					class="bar"></span>
+				<input type="password" onkeyup="" required="required" id="pwconfirm"><span class="highlight"></span><span
+					class="bar"></span><label>비밀번호 확인</label>
 			</div>
 
 			<div class="group">
-				<input type="text" name="name" id="name" required="required" placeholder="이름을 입력하세요"><span
-					class="highlight"></span><span class="bar"></span>
+				<input type="text" name="name" id="name" required="required"><span
+					class="highlight"></span><span class="bar"></span><label>이름</label>
 			</div>
 
 			<div class="group">
-				<input type="date" id="birth" name="birth" placeholder="생일을 입력하세요"><span class="highlight"></span><span
-					class="bar"></span>
+				<input type="date" id="birth" name="birth"><span class="highlight"></span><span
+					class="bar"></span><label>생년월일</label>
 			</div>
 			<br>
 
@@ -129,7 +129,7 @@
 					<option value="경제학">경제학</option>
 					<option value="교육학">교육학</option>
 					<option value="기타">기타</option>
-				</select>
+				</select><label>전공</label>
 			</div>
 			<br>
 
@@ -143,14 +143,14 @@
 					<option value="과장">과장</option>
 					<option value="임원">임원</option>
 					<option value="사장">사장</option>
-				</select>
+				</select><label>직급</label>
 			</div>
 
 
 			<div id="team">
 				<div class="group">
 					<input type="text" name="jyear" id="jyear" placeholder="입사년도을 입력하세요"><span class="highlight"></span><span
-						class="bar"></span>
+						class="bar"></span><label>입사년도</label>
 				</div>
 
 				<div class="group">
@@ -164,7 +164,7 @@
 						<option value="금융">금융</option>
 						<option value="보험">보험</option>
 						<option value="건설">건설</option>
-					</select>
+					</select><label>부서</label>
 				</div>
 			</div>
 			<br>

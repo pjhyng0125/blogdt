@@ -56,7 +56,7 @@ form hr.sep {
 form .emoji {
   font-size: 1.2em;
 }
-*/
+
 .group {
   position: relative;
   margin: 20px 0;
