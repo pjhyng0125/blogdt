@@ -1,14 +1,6 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
-
-<html>
-<head>
-	<title>·Î±×¾Æ¿ô Ã³¸®</title>
-</head>
-<body>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="utf-8"%>
 	<%
-		session.invalidate(); // ¸ðµç¼¼¼ÇÁ¤º¸ »èÁ¦
-		response.sendRedirect("../view/LoginForm.jsp"); // ·Î±×ÀÎ È­¸éÀ¸·Î ´Ù½Ã µ¹¾Æ°£´Ù.
+		session.invalidate(); // ëª¨ë“ ì„¸ì…˜ì •ë³´ ì‚­ì œ
+		response.sendRedirect("../view/bListView.jsp"); // ë¡œê·¸ì¸ í™”ë©´ìœ¼ë¡œ ë‹¤ì‹œ ëŒì•„ê°„ë‹¤.
 	%>
-</body>
-</html>

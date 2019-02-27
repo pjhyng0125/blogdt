@@ -18,7 +18,7 @@ input[type=text], input[type=password] {
 }
 
 /* Set a style for all buttons */
-button {
+ button {
   background-color:#EF000F;
   color: white;
   padding: 14px 20px;
@@ -126,11 +126,21 @@ span.psw {
   }
 }
 </style>
+<script>
+// Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
 
 </head>
 <body>
-
-<button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">로그인</button>
+<!-- <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;"><img src="../img/png/login.png"></button> -->
 <% 
 			// 아이디, 비밀번호가 틀릴경우 화면에 메시지 표시
 			// LoginPro.jsp에서 로그인 처리 결과에 따른 메시지를 보낸다.
@@ -145,20 +155,20 @@ span.psw {
 				out.println("<script>alert('아이디를 확인해 주세요.');</script>");;
 			}
 %>
-
+   
 <div id="id01" class="modal">
   
   <form class="modal-content animate" action="../pro/LoginPro.jsp" method="post">
     <div class="imgcontainer">
       <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-      <img src="../img/png/CareerInfo_logo.png" alt="Avatar" class="avatar">
+      <img src="../img/png/logo2.png" alt="Avatar" class="avatar">
     </div>
 
     <div class="container">
-      <label for="uname"><b>아이디</b></label>
+      <!-- <label for="uname"><b>아이디</b></label> -->
       <input type="text" placeholder="아이디를 입력하세요" name="id" required>
 
-      <label for="psw"><b>비밀번호</b></label>
+      <!-- <label for="psw"><b>비밀번호</b></label> -->
       <input type="password" placeholder="비밀번호를 입력하세요" name="pw" required>
         
       <button id="btnLogin" type="submit">로그인</button>
@@ -170,18 +180,3 @@ span.psw {
     </div>
   </form>
 </div>
-
-<script>
-// Get the modal
-var modal = document.getElementById('id01');
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-}
-</script>
-
-</body>
-</html>

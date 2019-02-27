@@ -9,6 +9,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@include file="../include/reference.jsp"%>
+<%@include file="../include/main.jsp"%>
 <title>bListView.jsp</title>
 <!-- 
 	파일명: bListView.jsp (board List view)
@@ -56,8 +57,6 @@
 <%
 	list=dao.getSelectList(selector);
 %>
-</head>
-<%@include file="../include/main.jsp"%>
 <article>
 <div class="container">
 <form>
@@ -85,11 +84,12 @@
  	<div class="col-md-3 class-list">
  		<input type="hidden" id="">
     	<div class="card zoom">
-        	<img class="card-img-top" src="<%=list.get(i).getImg() %>" style="width:100%" height="30%">
+        	<img class="card-img-top" src="../upload/<%=list.get(i).getImg() %>" style="width:100%" height="30%">
         	<div class="body text-center">
             	<p class="card-title">[<%=list.get(i).getBtype() %>]</p>
         		<p class="card-text"><%=list.get(i).getDept() %> <%=list.get(i).getName() %></p>
-                <a href="bContentView.jsp?num=<%=list.get(i).getNum() %>" class="btn btn-warning">See More<%=list.get(i).getNum() %></a>
+                <a href="bContentView.jsp?num=<%=list.get(i).getNum() %>" class="w3-btn w3-red">See More <%=list.get(i).getNum() %></a>
+            	<p></p>
             </div>
         </div>
     </div>

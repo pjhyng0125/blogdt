@@ -22,16 +22,16 @@
 		if(check == 1)	// 로그인 성공
 		{ 
 			// 세션에 현재 아이디 세팅
-			session.setAttribute("sessionID", id);
-			msg = "../view/LoginView.jsp";
+			session.setAttribute("session_ID", id);
+			msg = "../view/bListView.jsp";
 		}
 		else if(check == 0) // 비밀번호가 틀릴경우
 		{
-			msg = "../view/LoginView.jsp?msg=0";
+			msg = "../view/bListView.jsp?msg=0";
 		}
 		else	// 아이디가 틀릴경우
 		{
-			msg = "../view/LoginView.jsp?msg=-1";
+			msg = "../view/bListView.jsp?msg=-1";
 		}
 		 
 			response.sendRedirect(msg);

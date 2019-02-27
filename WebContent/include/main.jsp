@@ -1,8 +1,9 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ include file= "../view/loginView.jsp"%>
+  
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
     <meta charset="utf-8">
-    <title></title>
     <style media="screen">
       div.container{
         width: 100%;
@@ -44,14 +45,29 @@
       }
     </style>
 
-  </head>
-  <body>
+  <%
+  	String sessionID= (String)session.getAttribute("session_ID");
+  %>
   <div class="container">
-  	<div class="log"><a href="bListView.jsp"><img src="../img/png/logout.png" width="50"></a></div>
-    <div class="welcome"><p>Hello .</p></div>
+  	<div class="log">
+  	
+  	<% 
+  		if(sessionID == null){ //세션이 없을때
+  	%>	
+  			<a onclick="document.getElementById('id01').style.display='block'" width='50'>로그인</a>
+  			<a href="../view/JoinView.jsp">회원가입</a>
+  	<%
+  		}
+  		else{
+  			out.println("<div class='welcome'><p style='display : inline'>");
+    		out.println(sessionID+"님 반갑습니다.</p>");
+    		out.println("<a href='../pro/LogoutPro.jsp' style='display : inline'>로그아웃</a></div>");
+  		}
+  	%>
+  	</div>
     
     <div class="logo">
-      <img src="../img/png/logo2.png" width = "350">
+      <img src="../img/png/logo3.png" width = "350">
     </div>
     <div class="top_menu">
       <ul>
@@ -61,5 +77,3 @@
       </ul>
     </div>
   </div>
-  </body>
-</html>

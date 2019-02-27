@@ -83,16 +83,19 @@
 </script>
 
 <title>joinView.jsp</title>
-
+   
 </head>
 <body>
 	<div class="container">
 		<form name="join" onsubmit="return validate();" action="../pro/JoinPro.jsp" method="post" novalidate>
 		<h1>회원 가입</h1>
 			<br>
-			<div class="group">
-				<input type="text" name="id" required="required" id="id"> <span
-					class="highlight"></span> <span class="bar"></span> <label>아이디</label>
+			<div class="group" >
+				<input type="text" name="id" required="required" id="id" onkeydown="idChk()"> <span
+					class="highlight"></span> <span class="bar"></span> <label >아이디</label>
+			</div>
+			<div class="idcheck">
+			
 			</div>
 
 			<div class="group">
@@ -121,6 +124,7 @@
 					<option value=""></option>
 					<option value="컴퓨터공학">컴퓨터공학</option>
 					<option value="정보통신공학">정보통신공학</option>
+					<option value="소프트웨어공학">소프트웨어공학</option>
 					<option value="경영학">경영학</option>
 					<option value="경제학">경제학</option>
 					<option value="교육학">교육학</option>
@@ -171,7 +175,7 @@
 		</div> -->
 			<div class="btn-box">
 				<button type="submit" class="btn btn-submit" id="btjoin">회원가입</button>
-				<button type="reset" class="btn btn-cancel" id="btcancel">취소</button>
+				<button type="button" class="btn btn-cancel" id="btcancel" onclick="document.location.href='../view/bListView.jsp'">취소</button>
 			</div>
 		</form>
 	</div>
