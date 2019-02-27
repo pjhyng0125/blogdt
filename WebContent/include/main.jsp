@@ -104,7 +104,7 @@ ul {
 		</ul>
 	</div>
 </div>
-<%--   <%
+<%-- <%
   	String sessionID= (String)session.getAttribute("login_id");
   %>
 	<div class="container">
