@@ -32,7 +32,7 @@
 			showAct();
 		});
 		$('#btmain').click(function(){
-			location.href="bListView.jsp";
+			location.href="../view/bListView.jsp";
 		});
 	});//function
 //카테고리 n개/ 카테고리당 수치 n개

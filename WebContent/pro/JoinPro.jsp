@@ -29,7 +29,6 @@
 	%>
 	
 	<script>
-	alert("회원가입 성공!");
 	document.location.href="../view/bListView.jsp";
 	</script>
 	

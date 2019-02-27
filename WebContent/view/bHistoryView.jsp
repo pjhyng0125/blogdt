@@ -15,8 +15,8 @@
 <%
 	List<BMyDTO> list=null;
 	BListDAO dao=BListDAO.getInstance();
-	session.getAttribute("sessionid");
-	list=dao.getMyList("pjhyng0125");
+	String login_id=(String)session.getAttribute("login_id");
+	list=dao.getMyList(login_id);
 %>
 
 </head>
@@ -41,7 +41,7 @@
       <tr>
         <td><%=list.get(i).getNum() %></td>
         <td><%=list.get(i).getId() %></td>
-        <td><a href="bContentView.jsp?num=<%=list.get(i).getNum() %>"><%=list.get(i).getTitle() %></a></td>
+        <td><a href="../view/bContentView.jsp?num=<%=list.get(i).getNum() %>"><%=list.get(i).getTitle() %></a></td>
         <td><%=list.get(i).getBtype() %></td>
       </tr>
     <%

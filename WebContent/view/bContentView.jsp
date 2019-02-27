@@ -35,10 +35,10 @@
 <script type="text/javascript">
 	$(function(){
 		$('#btupdate').click(function(){
-			location.href="bUpdateView.jsp?num="+<%=num %>;
+			location.href="../view/bUpdateView.jsp?num="+<%=num %>;
 		});
 		$('#btmain').click(function(){
-			location.href="bListView.jsp";
+			location.href="../view/bListView.jsp";
 		});
 	});
 </script>
