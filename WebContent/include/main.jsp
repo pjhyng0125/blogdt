@@ -51,7 +51,7 @@
     <div class="welcome"><p>Hello .</p></div>
     
     <div class="logo">
-      <img src="../img/png/logo2.png" width = "350">
+      <img src="../img/png/logo3.png" width = "350">
     </div>
     <div class="top_menu">
       <ul>
