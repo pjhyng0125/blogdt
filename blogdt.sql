@@ -50,6 +50,7 @@ insert into board values (7,"tube","안녕하세요 튜 브입니다!","연수�
 insert into board values (8,"subin","안녕하세요 무 지입니다!","연수원","muji.jpg","이건 내용쓰ㅎㅎ내에에에엥용");
 insert into board values (9,"subin","안녕하세요 박형진입니다!","연수원","daejun.jpg","이건 내용쓰ㅎㅎ내에에에엥용");
 
+select num,id,title,btype from board where id='pjhyng0125';
 
 select * from board;
 delete from board where num="5";

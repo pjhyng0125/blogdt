@@ -67,12 +67,12 @@
   	</div>
     
     <div class="logo">
-      <img src="../img/png/logo2.png" width = "350">
+      <img src="../img/png/logo3.png" width = "350">
     </div>
     <div class="top_menu">
       <ul>
       <li><a href="bInsertView.jsp"><img src="../img/png/writing2.png" width="60"></a></li>
-      <li><a href="bHistory.jsp"><img src="../img/png/history2.png" width="60"></a></li>
+      <li><a href="bHistoryView.jsp"><img src="../img/png/history2.png" width="60"></a></li>
       <li><a href="dShowView.jsp"><img src="../img/png/statistics2.png" width="60"></a></li>
       </ul>
     </div>
