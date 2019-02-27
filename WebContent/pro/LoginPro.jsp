@@ -22,7 +22,7 @@
 		if(check == 1)	// 로그인 성공
 		{ 
 			// 세션에 현재 아이디 세팅
-			session.setAttribute("session_ID", id);
+			session.setAttribute("login_id", id);
 			msg = "../view/bListView.jsp";
 		}
 		else if(check == 0) // 비밀번호가 틀릴경우

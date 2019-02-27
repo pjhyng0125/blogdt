@@ -14,6 +14,7 @@
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic+Coding:400,700|Nanum+Gothic:400,700,800|Nanum+Pen+Script&amp;subset=korean" rel="stylesheet">
 <style type="text/css">
+
   *,
 :before,
 :after {
@@ -25,9 +26,9 @@
 h1 {
 	font-family: 'Nanum Gothic', sans-serif;
 }
-/* body {
-  background: #EEEEEE;
-} */
+ body {
+  background: #FFFFFF;
+} 
 
 form {
   width: 320px;
@@ -183,11 +184,96 @@ label {
 .btn-p{
 	padding: 5px;
 }
+
 a:hover{
 	text-decoration:none;
 }
 .sizeRadio{
  float:left;
  width: 16px;
+}
+
+
+.button-3 {
+	width: 100px;
+	height: 30px;
+	border: 2px solid #34495e;
+	float: left;
+	text-align: center;
+	cursor: pointer;
+	position: relative;
+	box-sizing: border-box;
+	overflow: hidden;
+	margin: 0 0 5px 5px;
+}
+
+.button-3 a {
+	font-family: 'Nanum Gothic', sans-serif;
+	font-size: 16px;
+	color: #34495e;
+	text-decoration: none;
+	line-height: 30px;
+	transition: all .5s ease;
+	z-index: 0;
+	position: relative;
+}
+
+.eff-3 {
+	width: 150px;
+	height: 50px;
+	bottom: -50px;
+	background: #34495e;
+	position: absolute;
+	transition: all .5s ease;
+	z-index: -1;
+}
+
+.button-3:hover .eff-3 {
+	bottom: 0;
+}
+
+.button-3:hover a {
+	color: #fff;
+}
+
+
+/*로그인, 회원가입 버튼*/
+
+.button-2{
+  width: 100px;
+  height: 30px;
+  border:2px solid #ff6f61;
+  float:left;
+  text-align:center;
+  cursor:pointer;
+  position:relative;
+  box-sizing:border-box;
+  overflow:hidden;
+  margin:0 0 40px 50px;
+}
+.button-2 a{
+  font-family:'Nanum Gothic', sans-serif;
+  font-size:16px;
+  color:#ff6f61;
+  text-decoration:none;
+  line-height:30px;
+  transition:all .5s ease;
+  z-index:0;
+  position:relative;
+}
+.eff-2{
+  width:140px;
+  height:50px;
+  top:-50px;
+  background:#ff6f61;
+  position:absolute;
+  transition:all .5s ease;
+  z-index:-1;
+}
+.button-2:hover .eff-2{
+  top:0;
+}
+.button-2:hover a{
+  color:#fff;
 }
 </style>

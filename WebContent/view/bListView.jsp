@@ -55,7 +55,13 @@
 	});
 </script>
 <%
-	list=dao.getSelectList(selector);
+	try{
+		list=dao.getSelectList(selector);
+	}catch(Exception e){
+		out.println("게시물 없음");
+	}
+	
+	
 %>
 <article>
 <div class="container">

@@ -24,7 +24,7 @@
 		MultipartRequest multi = null;
 
 		try {
-			id = (String) session.getAttribute("sessionID");
+			id = (String) session.getAttribute("login_id");
 			if (id == null || id.equals("")) { // id가 Null 이거나 없을 경우
 				returnPage = "/blogdt/view/loginView.jsp"; // 로그인 페이지로 리다이렉트 한다.
 				request.getRequestDispatcher(returnPage).forward(request, response); // 로그인 페이지로 리다이렉트 한다.
