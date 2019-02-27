@@ -13,15 +13,16 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
   
 <style type="text/css">
+/*
   *,
 :before,
 :after {
   box-sizing: border-box;
 }
 
-/* body {
+body {
   background: #EEEEEE;
-} */
+} 
 
 form {
   width: 320px;
@@ -49,7 +50,7 @@ form hr.sep {
 form .emoji {
   font-size: 1.2em;
 }
-
+*/
 .group {
   position: relative;
   margin: 20px 0;
@@ -124,59 +125,5 @@ label {
   background: #ef000f;
   transition: 300ms ease all;
   left: 0%;
-}
-
-.btn {
-  background: #ef000f;
-  color: #959595;
-  border: none;
-  padding: 10px 20px;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  text-decoration: none;
-  outline: none;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-}
-.btn:hover {
-  color: #8b8b8b;
-  box-shadow: 0 7px 14px rgba(0, 0, 0, 0.18), 0 5px 5px rgba(0, 0, 0, 0.12);
-}
-.btn.btn-link {
-  background: #ef000f;
-  color: #d3eafd;
-}
-.btn.btn-link:hover {
-  background: #0d8aee;
-  color: #deeffd;
-}
-.btn.btn-submit {
-  background: #ef000f;
-  color: #deeffd;
-}
-.btn.btn-submit:hover {
-  background: #0d8aee;
-  color: #deeffd;
-}
-.btn.btn-cancel {
-  background: #eee;
-}
-.btn.btn-cancel:hover {
-  background: #e1e1e1;
-  color: #8b8b8b;
-}
-
-.btn-box {
-  text-align: center;
-  margin: 50px 0;
-}
-.btn-box2 {
-  text-align: center;
-  margin: 3px 0;
-}
-
-.sizeRadio{
- float:left;
- width: 16px;
 }
 </style>
