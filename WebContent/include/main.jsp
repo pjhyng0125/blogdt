@@ -129,13 +129,6 @@ ul {
 	</div>
 	<div class="top_menu">
 		<ul>
-			<li>
-				<div class="button-1">
-					<div class="eff-1"></div>
-					<a href="#"> 글쓰기 </a>
-				</div>
-			</li>
-
 			<li><a href="bInsertView.jsp"
 				class="button_base b01_simple_rollover">글쓰기</a></li>
 			<li><a href="bHistoryView.jsp"
