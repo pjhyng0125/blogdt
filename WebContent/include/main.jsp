@@ -72,11 +72,15 @@ ul {
 		</div>
 		<%
 			} else {
-				out.println("<div class='welcome'><p style='display : inline'>");
-				out.println(sessionID + "님 반갑습니다.</p>");
-				out.println("<a href='../pro/LogoutPro.jsp' style='display : inline'>로그아웃</a></div>");
-			}
 		%>
+		<div class="button-2">
+			<div class="eff-2"></div>
+				<a href='../pro/LogoutPro.jsp' style='display : inline'>로그아웃</a></div>
+		</div>
+				<div class='welcome'><p style='display : inline'>
+				<%=sessionID%> 님 반갑습니다.</p>
+				
+		<%}%>
 	</div>
 
 	<div class="logo">

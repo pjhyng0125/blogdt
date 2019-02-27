@@ -67,7 +67,7 @@
       	<div class="card zoom">
         	<div class="body text-left">
       			<div class="col-sm-6">
-          			※ Board의 Content를 뿌려줄 영역입니당 
+          			<!-- ※ Board의 Content를 뿌려줄 영역입니당  -->
       			 	<%=dto.getContent() %>  
      			 </div>        		
             </div>
