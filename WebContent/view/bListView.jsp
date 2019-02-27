@@ -9,7 +9,11 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@include file="../include/reference.jsp"%>
+<<<<<<< HEAD
 <%@include file="../include/main.jsp"%>
+=======
+
+>>>>>>> nw
 <title>bListView.jsp</title>
 <!-- 
 	파일명: bListView.jsp (board List view)
@@ -88,8 +92,12 @@
         	<div class="body text-center">
             	<p class="card-title">[<%=list.get(i).getBtype() %>]</p>
         		<p class="card-text"><%=list.get(i).getDept() %> <%=list.get(i).getName() %></p>
+<<<<<<< HEAD
                 <a href="bContentView.jsp?num=<%=list.get(i).getNum() %>" class="w3-btn w3-red">See More <%=list.get(i).getNum() %></a>
             	<p></p>
+=======
+                <a href="bContentView.jsp?num=<%=list.get(i).getNum() %>" class="t-btn red transparent press-me">See More<%=list.get(i).getNum() %></a>
+>>>>>>> nw
             </div>
         </div>
     </div>
