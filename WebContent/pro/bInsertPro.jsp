@@ -36,7 +36,6 @@
 		try {
 			realFolder = context.getRealPath(saveFolder);
 			multi = new MultipartRequest(request, realFolder, maxSize, encType, new DefaultFileRenamePolicy());
-			int num = Integer.parseInt(multi.getParameter("num"));
 			String tit = multi.getParameter("title");
 			String cat = multi.getParameter("btname");
 			switch (cat) {

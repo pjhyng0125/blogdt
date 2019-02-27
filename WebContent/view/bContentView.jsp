@@ -69,8 +69,8 @@
   </div>
   
   <div class="btn-box">
-	<button type="button" id="btupdate" class="btn btn-submit">게시물 수정</button>
-	<button type="button" id="btmain"  class="btn btn-cancel">목록으로</button>
+	<a type="button" id="btupdate" class="w3-btn w3-red">게시물 수정</a>
+	<a type="button" id="btmain"  class="w3-btn w3-border">목록으로</a>
   </div>
 </div>  
 
