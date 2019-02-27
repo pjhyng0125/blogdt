@@ -36,8 +36,20 @@
 		try {
 			realFolder = context.getRealPath(saveFolder);
 			multi = new MultipartRequest(request, realFolder, maxSize, encType, new DefaultFileRenamePolicy());
+			int num = Integer.parseInt(multi.getParameter("num"));
 			String tit = multi.getParameter("title");
 			String cat = multi.getParameter("btname");
+			String con = multi.getParameter("content");
+			String img = multi.getFilesystemName("new_img");
+			String omg = multi.getParameter("old_img");
+			if(img==null){
+				if(omg==null){
+					img = "";
+				}else{
+					img = omg;
+				}
+			}
+			
 			switch (cat) {
 			case "1":
 				cat = "신입사원 소개";
@@ -55,11 +67,9 @@
 				cat = "기타";
 				break;
 			}
-			String img = multi.getFilesystemName("img");
-			String con = multi.getParameter("content");
 
 			BoardDAO dao = BoardDAO.getInstance();
-			dao.updateBoard(new BoardVO(0, id, tit, cat, img, con));
+			dao.updateBoard(new BoardVO(num, id, tit, cat, img, con));
 
 		} catch (Exception e) {
 			returnPage = "500code.jsp";
