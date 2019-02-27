@@ -155,7 +155,7 @@ window.onclick = function(event) {
 				out.println("<script>alert('아이디를 확인해 주세요.');</script>");;
 			}
 %>
-
+   
 <div id="id01" class="modal">
   
   <form class="modal-content animate" action="../pro/LoginPro.jsp" method="post">
