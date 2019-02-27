@@ -51,16 +51,16 @@
 
 			<div class="group">
 				<input type="text" name="title" value="<%=board.getTitle()%>"/><label>제목</label> <input
-					type="hidden" name="num" value="<%=num %>" />
+					type="hidden" name="num" value="<%=num %>" required/>
 			</div>
 
 			<div class="group">
-				<select name="btname">
-					<option value="0">선택</option>
+				<select name="btname" required>
+					<option value="0" selected disabled>선택</option>
 					<%
 						if (selected.equals("신입사원 소개")) {
 					%>
-					<option value="1" selected>신입사원 소개</option>
+					<option value="1">신입사원 소개</option>
 					<%
 						} else {
 					%>
@@ -125,7 +125,7 @@
 			</div>
 
 			<div class="group">
-				<textarea rows="5" name="content" required="required"><%=board.getContent()%></textarea>
+				<textarea rows="5" name="content" required><%=board.getContent()%></textarea>
 				<span class="highlight"></span><span class="bar"></span> <label>내용</label>
 			</div>
 
