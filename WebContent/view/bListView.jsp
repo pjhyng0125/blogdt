@@ -84,7 +84,7 @@
  	<div class="col-md-3 class-list">
  		<input type="hidden" id="">
     	<div class="card zoom">
-        	<img class="card-img-top" src="<%=list.get(i).getImg() %>" style="width:100%" height="30%">
+        	<img class="card-img-top" src="../upload/<%=list.get(i).getImg() %>" style="width:100%" height="30%">
         	<div class="body text-center">
             	<p class="card-title">[<%=list.get(i).getBtype() %>]</p>
         		<p class="card-text"><%=list.get(i).getDept() %> <%=list.get(i).getName() %></p>
